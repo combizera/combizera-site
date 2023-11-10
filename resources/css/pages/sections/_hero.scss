@@ -1,0 +1,25 @@
+.hero{
+  padding: 120px 40px;
+  h1{
+    font-size: 6.25rem !important;
+    font-weight: 400;
+  }
+  h2{
+    font-weight: 400;
+    margin: 20px 0;
+    a{
+      font-size: 1.5rem;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .btns{
+    margin-top: 20px;
+  }
+  &__txt{
+    p{
+      width: 70%;
+    }
+  }
+}
