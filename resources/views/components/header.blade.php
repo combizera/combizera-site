@@ -1,10 +1,9 @@
-<header>
+<header class="border">
   <div class="header container space-between">
     {{-- LOGO --}}
     <div class="header__logo">
       <a href="/">
-        Logo
-        {{-- <img src="" alt=""> --}}
+        <x-icons.logo></x-icons>
       </a>
     </div>
 

@@ -66,7 +66,7 @@
 
   // a
   @else if $size == a1 and $device == desktop {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       line-height: 100%;
   } @else if $size == a1 and $device == mobile {
       font-size: 1.125rem;
