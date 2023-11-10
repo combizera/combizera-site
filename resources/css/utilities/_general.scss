@@ -1,8 +1,7 @@
 .container {
 	max-width: $container-xl;
 	margin: 0 auto;
-	padding: 0px 20px;
-	border: 2px solid red;
+	// border: 2px solid red;
 }
 
 .ul {
@@ -10,5 +9,5 @@
 }
 
 .border {
-	border-radius: 8px;
+  border: 2px solid $dark;
 }

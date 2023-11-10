@@ -1,6 +1,7 @@
 <footer>
   <div class="footer">
-    <div class="grid-4 container">
+    <div class="border">
+      <div class="container grid-4">
       <div class="footer__box">
         <h6>Mapa do Site</h6>
         <nav>
@@ -62,15 +63,15 @@
           <p>Telefone</p>
           <a target="_blank" href="https://wa.me/5553999902079">+55 (53) 99990-2079</a>
         </div>
+        <br>
         <div>
           <p>Email</p>
           <a target="_blank" href="mailto:ola@combizera.com">ola@combizera.com</a>
         </div>
       </div>
-
     </div>
-
-    <div class="footer__copy">
+  </div>
+    <div class="footer__copy border">
       <p>
         Ygor Combi // {{ date('Y') }} // Todos os Direitos Reservados
       </p>
