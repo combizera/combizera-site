@@ -10,6 +10,26 @@
   }
   &__social{
     grid-column: span 2;
+    #arrow{
+      transition: .2s;
+    }
+    a{
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      opacity: 1;
+    }
+    li{
+      &:hover{
+        #arrow{
+          transform: translateY(-1.5px) translateX(1.5px);
+        }
+        a{
+          opacity: .7;
+          text-decoration: underline;
+        }
+      }
+    }
   }
   &__copy{
     p{
