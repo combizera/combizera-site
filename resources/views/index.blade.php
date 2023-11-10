@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="hero__img">
-          <img src="{{ Vite::image('ygor-combi.png') }}" alt="Foto do Ygor Combi" />
+          <img class="border-card" src="{{ Vite::image('ygor-combi.png') }}" alt="Foto do Ygor Combi" />
         </div>
       </section>
 

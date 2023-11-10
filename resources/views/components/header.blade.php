@@ -1,4 +1,4 @@
-<header class="border">
+<header id="header" class="border-bottom">
   <div class="header container space-between">
     {{-- LOGO --}}
     <div class="header__logo">
