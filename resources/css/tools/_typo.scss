@@ -6,17 +6,17 @@
       font-size: 3rem !important;
       line-height: 120%;
   } @else if $size == h1 and $device == mobile {
-      font-size: 2rem !important;
-      line-height: 120%;
+      // font-size: 2rem !important;
+      // line-height: 120%;
   }
 
   // H2
   @if $size == h2 and $device == desktop {
-      font-size: 1.5rem !important;
+      font-size: 3.75rem !important;
       line-height: 120%;
     } @else if $size == h2 and $device == mobile {
-      font-size: 1.5rem;
-      line-height: 120%;
+      // font-size: 3.5rem;
+      // line-height: 120%;
   }
 
   // H3
@@ -24,8 +24,8 @@
       font-size: 1.5rem !important;
       line-height: 2rem;
   } @else if $size == h3 and $device == mobile {
-      font-size: 1.5rem !important;
-      line-height: 120%;
+      // font-size: 1.5rem !important;
+      // line-height: 120%;
   }
 
   // H4
@@ -33,8 +33,8 @@
       font-size: 1.125rem;
       line-height: 120%;
   } @else if $size == h4 and $device == mobile {
-      font-size: 1.125rem;
-      line-height: 120%;
+      // font-size: 1.125rem;
+      // line-height: 120%;
   }
 
   // H5
@@ -42,8 +42,8 @@
       font-size: 1.25rem !important;
       line-height: 120%;
   } @else if $size == h5 and $device == mobile {
-      font-size: 1rem;
-      line-height: 120%;
+      // font-size: 1rem;
+      // line-height: 120%;
   }
 
   // H6
@@ -51,8 +51,8 @@
       font-size: 1rem !important;
       line-height: normal;
   } @else if $size == h6 and $device == mobile {
-      font-size: 1rem !important;
-      line-height: normal;
+      // font-size: 1rem !important;
+      // line-height: normal;
   }
 
   // p
