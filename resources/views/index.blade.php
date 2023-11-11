@@ -70,5 +70,9 @@
         </div>
       </section>
 
+      {{-- FEATURES --}}
+      <section class="features">
+        <x-tag :tags="$tags"></x-tag>
+      </section>
     </main>
 </x-layout>
