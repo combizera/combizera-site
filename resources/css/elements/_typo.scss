@@ -49,6 +49,13 @@ p {
   }
 }
 
+.p {
+  @include typeface-1(p-2, desktop);
+  @include responsive(s) {
+      @include typeface-1(p-2, mobile);
+  }
+}
+
 a {
   color: inherit;
   font-weight: unset;

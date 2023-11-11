@@ -71,7 +71,7 @@
       </section>
 
       {{-- FEATURES --}}
-      <section class="features">
+      <section class="features border">
         <x-tag :tags="$tags"></x-tag>
       </section>
     </main>

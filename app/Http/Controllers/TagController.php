@@ -10,12 +10,12 @@ class TagController extends Controller
   {
     $tags = [
       [
-        'number' => '1',
-        'text' => 'a'
+        'number' => '+25',
+        'text' => 'feedbacks positivos'
       ],
       [
-        'number' => '2',
-        'text' => 'bb'
+        'number' => '+15',
+        'text' => 'projetos'
       ],
     ];
 

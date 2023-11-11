@@ -15,5 +15,3 @@ use App\Http\Controllers\TagController;
 */
 
 Route::get('/', [TagController::class, 'index']);
-
-// Route::get('/', [TagController::class, 'index']);
