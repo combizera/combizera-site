@@ -23,4 +23,9 @@ class TagController extends Controller
       'tags' => $tags
     ]);
   }
+
+  public function create()
+  {
+    return view('tags.create');
+  }
 }

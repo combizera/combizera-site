@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Ygor Combi | Product Manager">
     <main class="index bg-pattern" style="--icon-url:url('{{ Vite::image('icons/pattern-dot.svg') }}')">
       {{-- HERO --}}
       <section id="hero" class="hero container grid-2">
@@ -72,7 +72,7 @@
 
       {{-- FEATURES --}}
       <section class="features border">
-        <x-tag :tags="$tags"></x-tag>
+        <x-tags.index :tags="$tags"></x-tag>
       </section>
     </main>
 </x-layout>

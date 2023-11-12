@@ -11,3 +11,8 @@
     </li>
   @endforeach
 </ul>
+
+<script>
+  // Agora o front consegue pegar com segurança os dados
+  const tags = {{ Js::from($tags) }};
+</script>

@@ -15,3 +15,4 @@ use App\Http\Controllers\TagController;
 */
 
 Route::get('/', [TagController::class, 'index']);
+Route::get('/criar-tag', [TagController::class, 'index']);
