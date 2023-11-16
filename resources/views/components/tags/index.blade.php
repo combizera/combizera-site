@@ -3,7 +3,7 @@
   @foreach ($tags as $tag)
     <li class="center">
       <span class="border-card">
-        {{ $tag['number'] }}
+        +{{ $tag['number'] }}
       </span>
       <p class="p">
         {{ $tag['text'] }}

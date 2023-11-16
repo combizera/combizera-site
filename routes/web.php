@@ -15,4 +15,5 @@ use App\Http\Controllers\TagController;
 */
 
 Route::get('/', [TagController::class, 'index']);
-Route::get('/criar-tag', [TagController::class, 'create']);
+Route::get('/tags/criar', [TagController::class, 'create']);
+Route::get('/tags/salvar', [TagController::class, 'store']);
