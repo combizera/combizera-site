@@ -10,7 +10,11 @@ class AdminController extends Controller
 {
   public function login()
   {
-    return view('admin/login');
+    if (Auth::check()) {
+      return to_route('admin');
+    } else {
+      return view('admin/login');
+    }
   }
   public function auth(LoginFormRequest $request)
   {
@@ -25,10 +29,5 @@ class AdminController extends Controller
   public function index()
   {
     return view('admin/index');
-    // if (Auth::check()) {
-    //   return view('admin/index');
-    // } else {
-    //   return to_route('login');
-    // }
   }
 }

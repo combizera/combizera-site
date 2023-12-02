@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +17,15 @@ use App\Http\Controllers\TagController;
 |
 */
 
-Route::get('/', [TagController::class, 'index']);
-Route::get('/tags/criar', [TagController::class, 'create']);
-Route::post('/tags/salvar', [TagController::class, 'store']);
+Route::get('/', [SiteController::class, 'index']);
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/login', [AdminController::class, 'auth'])->name('login');
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');
+
+Route::middleware('auth')->group(function () {
+  Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');
+
+  Route::get('/tags/criar', [TagController::class, 'create']);
+  Route::post('/tags/salvar', [TagController::class, 'store']);
+});

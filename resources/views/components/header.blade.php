@@ -1,4 +1,15 @@
 <header id="header" class="border-bottom">
+  @auth
+  <div class="header__admin">
+    vc esta logado
+  </div>
+  @endauth
+
+  @guest
+  <div class="header__admin">
+    vc é um visitante
+  </div>
+  @endguest
   <div class="header container space-between">
     {{-- LOGO --}}
     <div class="header__logo">
