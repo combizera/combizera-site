@@ -16,4 +16,4 @@ use App\Http\Controllers\TagController;
 
 Route::get('/', [TagController::class, 'index']);
 Route::get('/tags/criar', [TagController::class, 'create']);
-Route::get('/tags/salvar', [TagController::class, 'store']);
+Route::post('/tags/salvar', [TagController::class, 'store']);

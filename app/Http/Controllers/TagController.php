@@ -2,22 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use DB;
 
 class TagController extends Controller
 {
   public function index()
   {
-    $tags = [
-      [
-        'number' => '25',
-        'text' => 'feedbacks positivos'
-      ],
-      [
-        'number' => '15',
-        'text' => 'projetos'
-      ],
-    ];
+    $tags = Tag::all();
 
     return view('index', [
       'tags' => $tags
@@ -33,6 +26,10 @@ class TagController extends Controller
   {
     $nameTag = $request->input('text');
     $numberTag = $request->input('number');
-    return view('tags.create');
+    // Aqui estou criando e linkando minha variavel com BD
+    Tag::create([
+      'text' => $nameTag,
+      'number' => $numberTag
+    ]);
   }
 }
