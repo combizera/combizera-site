@@ -13,9 +13,13 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 40px;
+  @include responsive(m) {
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
 	@include responsive(s) {
 		grid-template-columns: 1fr;
-		gap: 40px 0 ;
+		gap: 40px;
 	}
 }
 

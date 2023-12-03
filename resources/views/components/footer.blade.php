@@ -16,6 +16,11 @@
               <li>
                 <a href="#">- Contato</a>
               </li>
+              @guest
+                <li>
+                  <a href="/login">- Login</a>
+                </li>
+              @endguest
             </ul>
           </nav>
         </div>
@@ -96,8 +101,7 @@
   </div>
     <div class="footer__copy border">
       <p>
-        Ygor Combi // {{ date('Y') }} // Todos os Direitos Reservados
-      </p>
+        Ygor Combi // {{ date('Y') }} // Todos os Direitos Reservados</p>
       {{-- DESENVOLVIDO POR --}}
       {{-- <a href="https://combizera.com" target="_blank">Desenvolvido por Combizera</a> --}}
     </div>

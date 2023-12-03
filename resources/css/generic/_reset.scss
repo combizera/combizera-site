@@ -30,9 +30,42 @@ img {
 	object-fit: cover;
 }
 
+span, input, label{
+  font-family: $font-pri;
+}
+
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+
+// BARRA DE SCROLL
+// Chrome // Edge
+::-webkit-scrollbar {
+  width: 1rem; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $dark;
+}
+
+::-webkit-scrollbar-track {
+  border-left: 2px solid $dark;
+  background-color: $white;
+}
+
+/* Firefox */
+::-moz-scrollbar {
+  width: 1rem;
+}
+
+::-moz-scrollbar-thumb {
+  border-left: 2px solid $dark;
+  background-color: $white;
+}
+
+::-moz-scrollbar-track {
+  background-color: $white;
 }

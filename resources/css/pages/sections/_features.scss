@@ -1,0 +1,15 @@
+.features {
+  &__cards{
+    display: flex;
+    li{
+      background-color: $background;
+      padding: 20px;
+      gap: 20px;
+      border-right: 2px solid $dark;
+    }
+    span{
+      padding: 10px;
+      background-color: tomato;
+    }
+  }
+}

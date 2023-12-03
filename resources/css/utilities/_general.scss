@@ -12,6 +12,20 @@
   border: 2px solid $dark;
 }
 
-.index{
-  background-color: #F4F0E3;
+.border-card{
+  border: 2px solid $dark;
+  box-shadow: 4px 4px 0px 0px $dark;
+}
+
+.border-bottom{
+  border-bottom: 2px solid $dark;
+}
+
+.bg-pattern{
+  background-color: $background;
+  background-image: var(--icon-url);
+}
+
+.bg-white{
+  background-color: $white;
 }
