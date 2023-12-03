@@ -28,4 +28,28 @@
       width: 100%;
     }
   }
+  @include responsive(m){
+    h1{
+      font-size: 4.5rem !important;
+    }
+  }
+  @include responsive(s){
+    padding: 120px 20px;
+    h1{
+      font-size: 3rem !important;
+    }
+    h2{
+      margin: 20px 0;
+      font-size: 1.25rem !important;
+    }
+    .btns{
+      margin: 40px 0;
+    }
+    &__txt{
+      p{
+        width: 100%;
+        line-height: 140%;
+      }
+    }
+  }
 }

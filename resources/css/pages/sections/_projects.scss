@@ -27,4 +27,9 @@
       font-weight: 300;
     }
   }
+  @include responsive(s){
+    .container{
+      padding: 80px 20px;
+    }
+  }
 }

@@ -15,8 +15,8 @@
       font-size: 3.75rem !important;
       line-height: 120%;
     } @else if $size == h2 and $device == mobile {
-      // font-size: 3.5rem;
-      // line-height: 120%;
+      font-size: 3rem !important;
+      line-height: 120%;
   }
 
   // H3

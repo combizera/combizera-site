@@ -1,5 +1,9 @@
 .footer{
   margin-top: 20px;
+  .border{
+    border-left: 0;
+    border-right: 0;
+  }
   .grid-4{
     gap: 0;
   }
@@ -55,6 +59,21 @@
     p{
       text-align: center;
       padding: 10px 0;
+    }
+  }
+  @include responsive(s){
+    &__box{
+      display: none;
+    }
+    &__social{
+      border-left: 0;
+      border-right: 0;
+      .grid-3{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &__copy{
+      padding: 0 20px;
     }
   }
 }

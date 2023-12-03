@@ -8,6 +8,8 @@
     padding: 20px;
   }
   &__profile{
+    display: flex;
+    align-items: center;
     gap: 20px;
     img{
       border: 2px solid $dark;
@@ -22,5 +24,8 @@
   }
   &__depo{
     margin: 40px 0;
+  }
+  @include responsive(s){
+    padding: 120px 20px;
   }
 }
