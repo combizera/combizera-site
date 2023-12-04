@@ -3,21 +3,6 @@
     display: block;
     margin-bottom: 10px;
   }
-  label{
-    font-size: 1.25rem;
-    display: block;
-    margin-bottom: 10px;
-  }
-  input{
-    font-size: 1rem;
-    border-radius: 0;
-    border: 2px solid $dark !important;
-    padding: .5rem .75rem;
-    min-width: 350px;
-    &::placeholder{
-      color: $grey;
-    }
-  }
   button{
     margin-top: 20px;
   }
