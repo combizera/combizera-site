@@ -1,0 +1,39 @@
+.skills{
+  padding-bottom: 60px;
+  article{
+    padding: 40px 0
+  }
+  .h2{
+    margin-bottom: 60px;
+  }
+  .h4{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  &__txt{
+    margin-right: 160px;
+  }
+  &__group{
+    border-top: 2px solid $dark;
+    padding-top: 20px;
+    margin: 20px 0;
+    &.grid-2{
+      gap: 60px;
+      justify-items: stretch;
+    }
+  }
+  &__list{
+    &.grid-2{
+      gap: 10px 20px;
+      justify-items: stretch;
+    }
+    li{
+      &::before{
+        content: "-";
+      }
+      &::after{
+        content: ";";
+      }
+    }
+  }
+}

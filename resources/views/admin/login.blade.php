@@ -8,7 +8,7 @@
         @csrf
         <div class="form__item">
           <label for="email">Email</label>
-          <input required type="email" name="email" id="email" placeholder="ygor@gmail.com.br">
+          <input required type="email" name="email" id="email" placeholder="ygor@email.com.br">
         </div>
 
         <div class="form__item">
