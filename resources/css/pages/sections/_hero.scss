@@ -24,8 +24,14 @@
     }
   }
   &__img {
+    position: relative;
     img{
       width: 100%;
+    }
+    .absolute{
+      margin-top: -40px;
+      left: 80%;
+      width: 120px;
     }
   }
   @include responsive(m){

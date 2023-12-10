@@ -1,5 +1,6 @@
 <x-layout title="Ygor Combi | Product Manager">
   <main class="index bg-pattern" style="--icon-url:url('{{ Vite::image('icons/pattern-dot.svg') }}')">
+
     {{-- HERO --}}
     <section id="hero" class="hero container grid-2">
       <div class="flex-column">
@@ -20,6 +21,7 @@
       </div>
       <div class="hero__img">
         <img class="border-card" src="{{ Vite::image('ygor-combi.png') }}" alt="Foto do Ygor Combi" />
+        <img class="absolute rotate" src="{{ Vite::image('icons/icon-asterisco.svg') }}" alt="Elemento Auxiliar - Asterisco" />
       </div>
     </section>
 
