@@ -1,5 +1,5 @@
 <x-layout title="Nova Tag" bodyClass="opi asd">
-  <form action="/tags/salvar" method="post">
+  <form action="{{ route('tags/save') }}" method="post">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
     <label for="number">Número</label>

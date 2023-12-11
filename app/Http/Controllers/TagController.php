@@ -32,4 +32,29 @@ class TagController extends Controller
       'number' => $numberTag
     ]);
   }
+
+  public function edit(Tag $tag)
+  {
+    return view('tags/edit', ['tag' => $tag]);
+  }
+
+  public function update(Request $request, Tag $tag)
+  {
+    $nameTag = $request->input('text');
+    $numberTag = $request->input('number');
+
+    $tag->update([
+      'text' => $nameTag,
+      'number' => $numberTag
+    ]);
+
+    return to_route('admin');
+  }
+
+  public function delete(Tag $tag)
+  {
+    $tag->delete();
+
+    return to_route('admin');
+  }
 }

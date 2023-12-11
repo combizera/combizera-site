@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginFormRequest;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,6 +17,7 @@ class AdminController extends Controller
       return view('admin/login');
     }
   }
+
   public function auth(LoginFormRequest $request)
   {
     if (Auth::attempt($request->validated())) {
@@ -28,6 +30,12 @@ class AdminController extends Controller
   }
   public function index()
   {
-    return view('admin/index');
+    $tags = Tag::all();
+
+    return view('admin/index', [
+      'tags' => $tags
+    ]);
+
+    // return view('admin/index');
   }
 }

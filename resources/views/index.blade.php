@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    {{-- FEATURES --}}
+    {{-- TAGS --}}
     <section class="features border">
       <x-tags.index :tags="$tags"></x-tag>
     </section>
