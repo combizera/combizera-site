@@ -44,7 +44,15 @@
       </div>
       <div class="modal__content">
         <p class="modal__message">
-          V-você tem certeza? Essa ação é irreversível 😣
+          V-você tem certeza? Essa ação é irreversível
+          <br>
+          &emsp;😣
+          <br>
+          👉👈
+          <br>
+          &emsp;👗
+          <br>
+          👠👠
         </p>
         <form class="modal__form" action="" method="POST">
           {{-- Diretiva que cuida da segurança --}}

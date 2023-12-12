@@ -7,7 +7,7 @@
   @foreach ($tags as $key => $tag)
     <li class="center">
       <span class="border-card color{{ ($key % 4) + 1 }}" style="background-color: {{ $colors[$key % 4] }}">
-        +{{ $tag['number'] }}
+        {{ $tag['number'] }}
       </span>
       <p class="p">
         {{ $tag['text'] }}
