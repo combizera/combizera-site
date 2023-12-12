@@ -1,0 +1,21 @@
+.admin{
+  &__nav{
+    padding: 40px 0 10px 0;
+  }
+
+  &__item{
+    padding: 20px 10px 20px 0;
+    align-items: center;
+    .btn{
+      background-color: $white;
+      padding: 5px;
+    }
+    button{
+      padding: 5px;
+    }
+    &-buttons{
+      display: flex;
+      gap: 20px;
+    }
+  }
+}

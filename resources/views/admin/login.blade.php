@@ -1,4 +1,4 @@
-<x-layout title="Login">
+<x-layout.admin title="Login">
   <main class="index bg-pattern" style="--icon-url:url('{{ Vite::image('icons/pattern-dot.svg') }}')">
 
     <section class="login container">
@@ -35,4 +35,4 @@
       @endif
     </section>
   </main>
-</x-layout>
+</x-layout.admin>

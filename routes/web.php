@@ -26,7 +26,7 @@ Route::post('/login', [AdminController::class, 'auth'])->name('login');
 Route::middleware('auth')->group(function () {
   Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');
 
-  Route::get('/tags/criar', [TagController::class, 'create']);
+  Route::get('/tags/criar', [TagController::class, 'create'])->name('tags.create');
   Route::post('/tags/save', [TagController::class, 'store'])->name('tags/save');
 
   Route::get('/admin/tags/{tag}/edit', [TagController::class, 'edit'])->name('tags.edit');

@@ -1,4 +1,4 @@
-<x-layout title="Nova Tag" bodyClass="opi asd">
+<x-layout.admin title="Nova Tag" bodyClass="opdidas">
   <form action="{{ route('tags/save') }}" method="post">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
@@ -8,4 +8,4 @@
     <input type="text" id="text" name="text">
     <button type="submit">Cadastrar Tag</button>
   </form>
-</x-layout>
+</x-layout.admin>

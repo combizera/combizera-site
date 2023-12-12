@@ -31,6 +31,8 @@ class TagController extends Controller
       'text' => $nameTag,
       'number' => $numberTag
     ]);
+
+    return to_route('admin');
   }
 
   public function edit(Tag $tag)
