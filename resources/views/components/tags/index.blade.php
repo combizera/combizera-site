@@ -1,7 +1,7 @@
 <ul class="ul features__cards scroll-horizontal">
   @php
     $colors = ['#9CD3FF', '#864FCC', '#EA5C5C', '#FFDE68'];
-    shuffle($colors); // Embaralha a ordem das cores
+    shuffle($colors);
   @endphp
 
   @foreach ($tags as $key => $tag)
