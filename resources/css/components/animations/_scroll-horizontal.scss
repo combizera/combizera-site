@@ -1,0 +1,22 @@
+.scroll-horizontal{
+  animation: scroll-horizontal 40s linear infinite;
+  // animation: scroll-horizontal2 20s linear infinite;
+}
+
+@keyframes scroll-horizontal{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-horizontal2{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,4 +1,8 @@
 .admin{
+  min-height: 600px;
+  .secao{
+    padding: 20px 0;
+  }
   &__nav{
     padding: 40px 0 10px 0;
     ul{
@@ -20,6 +24,19 @@
     &-buttons{
       display: flex;
       gap: 20px;
+    }
+  }
+
+  &__form{
+    label{
+      margin-top: 10px;
+    }
+    button{
+      display: block;
+      margin-top: 20px;
+      min-width: 350px;
+      font-size: 1.125rem !important;
+      // text-transform: uppercase;
     }
   }
 }
