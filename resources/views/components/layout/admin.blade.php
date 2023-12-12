@@ -4,7 +4,10 @@
       <nav class="admin__nav border-bottom">
         <ul class="ul">
           <li>
-            <a href="#">Tags</a>
+            <a href="#" class="">Projetos</a>
+          </li>
+          <li>
+            <a href="#" class="bold">Tags</a>
           </li>
         </ul>
       </nav>
@@ -13,4 +16,10 @@
     </section>
 
   </main>
+
+  @isset($scripts)
+    <x-slot:scripts>
+      {{ $scripts }}
+    </x-slot:scripts>
+  @endisset
 </x-layout>

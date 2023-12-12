@@ -1,0 +1,18 @@
+@use "sass:color";
+
+.modal{
+  color: $white;
+  &__wrapper{
+    background-color: color.adjust($dark, $alpha: - 0.25);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    inset: 0;
+
+    &.center{
+      display: none;
+    }
+    &.active{
+      display: flex;
+    }
+  }
+}
