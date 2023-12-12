@@ -4,7 +4,7 @@
     <nav class="header__nav container">
       <ul class="ul">
         <li>
-          <a href="">Editar Seções</a>
+          <a href="{{ route('admin') }}">Editar Seções</a>
         </li>
         <li>
           <a href="">Deslogar</a>

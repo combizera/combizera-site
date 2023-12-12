@@ -1,32 +1,35 @@
 <x-layout.admin title="Admin | Ygor Combi">
-  <ul class="ul">
-    @forelse($tags as $tag)
+  @if ($tags->isNotEmpty())
+    <ul class="ul">
+      @foreach($tags as $tag)
 
-    <li class="admin__item space-between border-bottom" data-route="{{ route('tags.delete', $tag) }}">
-      <div href="{{ route('tags.edit', $tag) }}">
-        {{ $tag->text }}
-        {{ $tag->number }}
-      </div>
+      <li class="admin__item space-between border-bottom" data-route="{{ route('tags.delete', $tag) }}">
+        <div href="{{ route('tags.edit', $tag) }}">
+          {{ $tag->text }}
+          {{ $tag->number }}
+        </div>
 
-      <div class="admin__item-buttons">
-        <a class="btn" href="{{ route('tags.edit', $tag) }}" class="editar">
-          <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
-        </a>
-        <button class="delete btn">
-          <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
-        </button>
-      </div>
-    </li>
+        <div class="admin__item-buttons">
+          <a class="btn" href="{{ route('tags.edit', $tag) }}" class="editar">
+            <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
+          </a>
+          <button class="delete btn">
+            <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
+          </button>
+        </div>
+      </li>
 
-    @empty
+      @endforeach
 
-    Não tem nenhuma TAG
+    </ul>
+
+  @else
 
     <a href="{{ route('tags.create') }}">Adicionar Tag</a>
 
-    @endforelse
-  </ul>
+  @endif
 
+  {{-- MODAL --}}
   <div class="modal__wrapper center">
     <div class="modal">
       <div class="modal__header">
