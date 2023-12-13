@@ -32,4 +32,11 @@ Route::middleware('auth')->group(function () {
   Route::get('/admin/tags/{tag}/edit', [TagController::class, 'edit'])->name('tags.edit');
   Route::put('/admin/tags/{tag}', [TagController::class, 'update'])->name('tags.update');
   Route::delete('/admin/tags/{tag}', [TagController::class, 'delete'])->name('tags.delete');
+
+  Route::get('/skills/criar', [TagController::class, 'create'])->name('skills.create');
+  Route::post('/skills/save', [TagController::class, 'store'])->name('skills/save');
+
+  Route::get('/admin/skills/{skill}/edit', [TagController::class, 'edit'])->name('skills.edit');
+  Route::put('/admin/skills/{skill}', [TagController::class, 'update'])->name('skills.update');
+  Route::delete('/admin/skills/{skill}', [TagController::class, 'delete'])->name('skills.delete');
 });
