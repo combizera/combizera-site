@@ -1,5 +1,6 @@
 .features {
   &__cards{
+    overflow: hidden;
     display: flex;
     li{
       background-color: $background;
