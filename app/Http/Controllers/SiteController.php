@@ -15,4 +15,9 @@ class SiteController extends Controller
       'tags' => $tags
     ]);
   }
+
+  public function error()
+  {
+    return view('errors.404');
+  }
 }
