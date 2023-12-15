@@ -1,6 +1,6 @@
 <x-layout.admin title="Admin | Ygor Combi">
   @if ($tags->isNotEmpty())
-    <ul class="ul">
+    <ul class="ul active">
       <a class="btn bg-white btn-add" href="{{ route('tags.create') }}" class="editar">
         <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
         Adicionar
@@ -26,12 +26,62 @@
       @endforeach
 
     </ul>
-
   @else
-
     <a href="{{ route('tags.create') }}">Adicionar Tag</a>
-
   @endif
+
+  <ul class="ul">
+    <a class="btn bg-white btn-add" href="#" class="editar">
+      <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
+      Adicionar
+    </a>
+
+    <li class="admin__item space-between border-bottom" data-route="#">
+      <div href="#}">
+        {{ $tag->number }}
+        {{ $tag->text }}
+      </div>
+
+      <div class="admin__item-buttons">
+        <a class="btn" href="#" class="editar">
+          <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
+        </a>
+        <button class="delete btn">
+          <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
+        </button>
+      </div>
+    </li>
+  </ul>
+  {{-- @if ($skills->isNotEmpty())
+  <ul class="ul">
+    <a class="btn bg-white btn-add" href="{{ route('skills.create') }}" class="editar">
+      <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
+      Adicionar
+    </a>
+    @foreach($skills as $skill)
+
+    <li class="admin__item space-between border-bottom" data-route="{{ route('skills.delete', $skill) }}">
+      <div href="{{ route('skills.edit', $skill) }}">
+        {{ $skill->text }}
+        {{ $skill->type }}
+      </div>
+
+      <div class="admin__item-buttons">
+        <a class="btn" href="{{ route('tags.edit', $tag) }}" class="editar">
+          <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
+        </a>
+        <button class="delete btn">
+          <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
+        </button>
+      </div>
+    </li>
+
+    @endforeach
+
+  </ul>
+  @else
+    <a href="{{ route('tags.create') }}">Adicionar Tag</a>
+  @endif --}}
 
   {{-- MODAL --}}
   <div class="modal__wrapper center">
@@ -73,5 +123,9 @@
 
   <x-slot:scripts>
     <script src="{{ Vite::script('modal.js') }}"></script>
+  </x-slot:scripts>
+
+  <x-slot:scripts>
+    <script src="{{ Vite::script('admin-accordion.js') }}"></script>
   </x-slot:scripts>
 </x-layout.admin>

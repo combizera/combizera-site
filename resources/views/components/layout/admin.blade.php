@@ -4,17 +4,17 @@
       @auth
         <nav class="admin__nav border-bottom">
           <ul class="ul">
-            <li>
-              <a href="#" class="bold">Tags</a>
+            <li class="active">
+              <a href="#" class="">Tags</a>
             </li>
             <li>
-              <a href="#" class="">Projetos</a>
+              <a href="#" class="">Skills</a>
             </li>
           </ul>
         </nav>
       @endauth
 
-      <div class="secao">
+      <div class="secao admin__content">
         {{ $slot }}
       </div>
     </section>
