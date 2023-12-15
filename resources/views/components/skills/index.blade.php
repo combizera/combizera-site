@@ -1,4 +1,4 @@
-<ul class="ul features__cards scroll-horizontal">
+<ul class="ul">
   <h2 class="h2">Skills</h2>
 
   {{-- SOFT --}}
@@ -10,15 +10,13 @@
       </div>
       <ul class="ul skills__list grid-2">
 
+        @foreach ($skills->where('type', \App\Enums\SkillType::SOFT->value)->all() as $skill)
+          <li>{{ $skill['text'] }}</li>
+        @endforeach
+
       </ul>
     </div>
   </article>
-
-  @foreach ($skills as $skil => $skill)
-    <li>{{ $skill['text'] }}</li>
-  @endforeach
-</ul>
-
 
   {{-- HARD --}}
   <article>
@@ -28,11 +26,16 @@
         <p>Habilidades comportamentais relacionadas a maneira como lido com situações com o time e também comigo mesmo. Listei as que mais se destacam no meu dia a dia.</p>
       </div>
       <ul class="ul skills__list grid-2">
-        <li>Inteligência Emocional</li>
-        <li>Comunicação Não Violenta</li>
-        <li>Comunicação</li>
-        <li>Escuta Ativa</li>
-        <li>Capacidade de Priorização</li>
+
+        @foreach ($skills->where('type', \App\Enums\SkillType::HARD->value)->all() as $skill)
+          <li>{{ $skill['text'] }}</li>
+        @endforeach
+
       </ul>
     </div>
   </article>
+
+</ul>
+
+
+
