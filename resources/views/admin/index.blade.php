@@ -1,4 +1,5 @@
 <x-layout.admin title="Admin | Ygor Combi">
+  {{-- TAGS --}}
   @if ($tags->isNotEmpty())
     <ul class="ul active">
       <a class="btn bg-white btn-add" href="{{ route('tags.create') }}" class="editar">
@@ -30,29 +31,8 @@
     <a href="{{ route('tags.create') }}">Adicionar Tag</a>
   @endif
 
-  <ul class="ul">
-    <a class="btn bg-white btn-add" href="#" class="editar">
-      <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
-      Adicionar
-    </a>
-
-    <li class="admin__item space-between border-bottom" data-route="#">
-      <div href="#}">
-        {{ $tag->number }}
-        {{ $tag->text }}
-      </div>
-
-      <div class="admin__item-buttons">
-        <a class="btn" href="#" class="editar">
-          <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
-        </a>
-        <button class="delete btn">
-          <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
-        </button>
-      </div>
-    </li>
-  </ul>
-  {{-- @if ($skills->isNotEmpty())
+  {{-- SKILLS --}}
+  @if ($skills->isNotEmpty())
   <ul class="ul">
     <a class="btn bg-white btn-add" href="{{ route('skills.create') }}" class="editar">
       <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
@@ -67,7 +47,7 @@
       </div>
 
       <div class="admin__item-buttons">
-        <a class="btn" href="{{ route('tags.edit', $tag) }}" class="editar">
+        <a class="btn" href="{{ route('skills.edit', $skill) }}" class="editar">
           <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
         </a>
         <button class="delete btn">
@@ -80,8 +60,8 @@
 
   </ul>
   @else
-    <a href="{{ route('tags.create') }}">Adicionar Tag</a>
-  @endif --}}
+    <a href="{{ route('skills.create') }}">Adicionar Skill</a>
+  @endif
 
   {{-- MODAL --}}
   <div class="modal__wrapper center">

@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Skill extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  protected $fillable = [
+    'text',
+    'type'
+  ];
 }
