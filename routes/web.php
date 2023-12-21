@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\DepoimentoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
@@ -43,4 +44,12 @@ Route::middleware('auth')->group(function () {
   Route::get('/admin/skills/{skill}/edit', [SkillController::class, 'edit'])->name('skills.edit');
   Route::put('/admin/skills/{skill}', [SkillController::class, 'update'])->name('skills.update');
   Route::delete('/admin/skills/{skill}', [SkillController::class, 'delete'])->name('skills.delete');
+
+   // DEPOIMENTOS
+   Route::get('/depoimentos/criar', [DepoimentosController::class, 'create'])->name('depoimentos.create');
+   Route::post('/depoimentos/save', [DepoimentosController::class, 'store'])->name('depoimentos.save');
+ 
+   Route::get('/admin/depoimentos/{depoimento}/edit', [DepoimentosController::class, 'edit'])->name('depoimentos.edit');
+   Route::put('/admin/depoimentos/{depoimento}', [DepoimentosController::class, 'update'])->name('depoimentos.update');
+   Route::delete('/admin/depoimentos/{depoimento}', [DepoimentosController::class, 'delete'])->name('depoimentos.delete');
 });

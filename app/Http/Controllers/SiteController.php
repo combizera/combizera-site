@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Depoimento;
 use App\Models\Skill;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -12,10 +13,12 @@ class SiteController extends Controller
   {
     $tags = Tag::all();
     $skills = Skill::all();
+    $depoimentos = Depoimento::all();
 
     return view('index', [
       'tags' => $tags,
-      'skills' => $skills
+      'skills' => $skills,
+      'depoimentos' => $depoimentos
     ]);
   }
 

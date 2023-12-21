@@ -63,43 +63,39 @@
     <a href="{{ route('skills.create') }}">Adicionar Skill</a>
   @endif
 
+  {{-- DEPOIMENTOS  --}}
+  @if ($depoimentos->isNotEmpty())
+    <ul class="ul">
+      <a class="btn bg-white btn-add" href="{{ route('depoimentos.create') }}" class="editar">
+        <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
+        Adicionar
+      </a>
+      @foreach($depoimentos as $depoimento)
+
+      <li class="admin__item space-between border-bottom" data-route="{{ route('depoimentos.delete', $depoimento) }}">
+        <div href="{{ route('depoimentos.edit', $depoimento) }}">
+          {{ $depoimento->text }}
+        </div>
+
+        <div class="admin__item-buttons">
+          <a class="btn" href="{{ route('depoimentos.edit', $depoimento) }}" class="editar">
+            <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
+          </a>
+          <button class="delete btn">
+            <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
+          </button>
+        </div>
+      </li>
+
+      @endforeach
+
+    </ul>
+  @else
+    <a href="{{ route('depoimentos.create') }}">Adicionar Skill</a>
+  @endif
+
   {{-- MODAL --}}
-  <div class="modal__wrapper center">
-    <div class="modal">
-      <div class="modal__header border-bottom space-between">
-        <p>deletar.exe</p>
-        <button class="modal__close">
-          <img src="{{ Vite::image('icons/icon-close.svg') }}" alt="Fechar Modal" />
-        </button>
-      </div>
-      <div class="modal__content">
-        <p class="modal__message">
-          V-você tem certeza? Essa ação é irreversível
-          <br>
-          &emsp;😣
-          <br>
-          👉👈
-          <br>
-          &emsp;👗
-          <br>
-          👠👠
-        </p>
-        <form class="modal__form" action="" method="POST">
-          {{-- Diretiva que cuida da segurança --}}
-          @csrf
-
-          @method ('DELETE')
-
-          <div class="btns">
-            <button class="btn btn-pri button-delete">
-              Apagar
-            </button>
-            <a href="#" class="btn">Cancelar</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  <x-modal></x-modal>
 
   <x-slot:scripts>
     <script src="{{ Vite::script('modal.js') }}"></script>

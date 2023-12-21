@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginFormRequest;
+use App\Models\Depoimento;
 use App\Models\Skill;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -33,12 +34,12 @@ class AdminController extends Controller
   {
     $tags = Tag::all();
     $skills = Skill::all();
+    $depoimentos = Depoimento::all();
 
     return view('admin/index', [
       'tags' => $tags,
-      'skills' => $skills
+      'skills' => $skills,
+      'depoimentos' => $depoimentos
     ]);
-
-    // return view('admin/index');
   }
 }
