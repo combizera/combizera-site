@@ -3,7 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SkillController;
-use App\Http\Controllers\DepoimentoController;
+use App\Http\Controllers\DepoimentosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [SiteController::class, 'index'])->name('index');
+Route::get('/projeto', [SiteController::class, 'project'])->name('project');
 Route::get('/404', [SiteController::class, 'error'])->name('error-404');
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
@@ -45,11 +46,11 @@ Route::middleware('auth')->group(function () {
   Route::put('/admin/skills/{skill}', [SkillController::class, 'update'])->name('skills.update');
   Route::delete('/admin/skills/{skill}', [SkillController::class, 'delete'])->name('skills.delete');
 
-   // DEPOIMENTOS
-   Route::get('/depoimentos/criar', [DepoimentosController::class, 'create'])->name('depoimentos.create');
-   Route::post('/depoimentos/save', [DepoimentosController::class, 'store'])->name('depoimentos.save');
- 
-   Route::get('/admin/depoimentos/{depoimento}/edit', [DepoimentosController::class, 'edit'])->name('depoimentos.edit');
-   Route::put('/admin/depoimentos/{depoimento}', [DepoimentosController::class, 'update'])->name('depoimentos.update');
-   Route::delete('/admin/depoimentos/{depoimento}', [DepoimentosController::class, 'delete'])->name('depoimentos.delete');
+  // DEPOIMENTOS
+  Route::get('/depoimentos/criar', [DepoimentosController::class, 'create'])->name('depoimentos.create');
+  Route::post('/depoimentos/save', [DepoimentosController::class, 'store'])->name('depoimentos.save');
+
+  Route::get('/admin/depoimentos/{depoimento}/edit', [DepoimentosController::class, 'edit'])->name('depoimentos.edit');
+  Route::put('/admin/depoimentos/{depoimento}', [DepoimentosController::class, 'update'])->name('depoimentos.update');
+  Route::delete('/admin/depoimentos/{depoimento}', [DepoimentosController::class, 'delete'])->name('depoimentos.delete');
 });

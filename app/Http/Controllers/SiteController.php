@@ -26,4 +26,9 @@ class SiteController extends Controller
   {
     return view('errors.404');
   }
+
+  public function project()
+  {
+    return view('project');
+  }
 }
