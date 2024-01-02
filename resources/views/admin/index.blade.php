@@ -33,32 +33,32 @@
 
   {{-- SKILLS --}}
   @if ($skills->isNotEmpty())
-  <ul class="ul">
-    <a class="btn bg-white btn-add" href="{{ route('skills.create') }}" class="editar">
-      <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
-      Adicionar
-    </a>
-    @foreach($skills as $skill)
+    <ul class="ul">
+      <a class="btn bg-white btn-add" href="{{ route('skills.create') }}" class="editar">
+        <img src="{{ Vite::image('icons/icon-pencil-more.svg') }}" alt="Adicionar" />
+        Adicionar
+      </a>
+      @foreach($skills as $skill)
 
-    <li class="admin__item space-between border-bottom" data-route="{{ route('skills.delete', $skill) }}">
-      <div href="{{ route('skills.edit', $skill) }}">
-        {{ $skill->text }}
-        {{ $skill->type }}
-      </div>
+      <li class="admin__item space-between border-bottom" data-route="{{ route('skills.delete', $skill) }}">
+        <div href="{{ route('skills.edit', $skill) }}">
+          {{ $skill->text }}
+          {{ $skill->type }}
+        </div>
 
-      <div class="admin__item-buttons">
-        <a class="btn" href="{{ route('skills.edit', $skill) }}" class="editar">
-          <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
-        </a>
-        <button class="delete btn">
-          <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
-        </button>
-      </div>
-    </li>
+        <div class="admin__item-buttons">
+          <a class="btn" href="{{ route('skills.edit', $skill) }}" class="editar">
+            <img src="{{ Vite::image('icons/icon-pencil.svg') }}" alt="Editar" />
+          </a>
+          <button class="delete btn">
+            <img src="{{ Vite::image('icons/icon-trash.svg') }}" alt="Apagar" />
+          </button>
+        </div>
+      </li>
 
-    @endforeach
+      @endforeach
 
-  </ul>
+    </ul>
   @else
     <a href="{{ route('skills.create') }}">Adicionar Skill</a>
   @endif
@@ -91,7 +91,7 @@
 
     </ul>
   @else
-    <a href="{{ route('depoimentos.create') }}">Adicionar Skill</a>
+    <a href="{{ route('depoimentos.create') }}">Adicionar Depoimento</a>
   @endif
 
   {{-- MODAL --}}

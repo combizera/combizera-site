@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Depoimento extends Model
 {
-    use HasFactory;
-    protected $fillable = [
-        'text'
+  use HasFactory;
+  protected $fillable = [
+    'text'
   ];
 }
