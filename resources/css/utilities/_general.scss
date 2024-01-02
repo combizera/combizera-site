@@ -1,7 +1,20 @@
-.container {
+.container{
 	max-width: $container-xl;
 	margin: 0 auto;
-	// border: 2px solid red;
+	border: 2px solid red;
+  @include responsive(m){
+    border: 2px solid greenyellow;
+  }
+  @include responsive(sm){
+    border: 2px solid blue;
+  }
+  @include responsive(s){
+    border: 2px solid tomato;
+  }
+}
+
+.secao{
+  padding: 60px 0;
 }
 
 .ul {
@@ -28,4 +41,10 @@
 
 .bg-white{
   background-color: $white;
+}
+
+.absolute{
+  position: absolute;
+  top: 0;
+  left: 0;
 }

@@ -1,7 +1,11 @@
 @import 'header';
 @import 'footer';
+@import '404';
 @import 'sections/hero';
 @import 'sections/projects';
 @import 'sections/features';
 @import 'sections/testimonials';
+@import 'sections/skills';
+@import 'admin/admin';
 @import 'admin/login';
+@import 'project/index';

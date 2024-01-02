@@ -1,4 +1,5 @@
 .header{
+  align-items: center;
   &.container{
     padding: 10px 40px;
   }
@@ -7,5 +8,10 @@
       display: flex;
       gap: 20px;
     }
+  }
+  &__admin{
+    padding: 10px 20px;
+    background-color: $dark;
+    color: $white;
   }
 }

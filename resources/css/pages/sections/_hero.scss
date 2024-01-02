@@ -24,13 +24,24 @@
     }
   }
   &__img {
+    position: relative;
     img{
       width: 100%;
+    }
+    .absolute{
+      margin-top: -40px;
+      left: 80%;
+      width: 120px;
     }
   }
   @include responsive(m){
     h1{
       font-size: 4.5rem !important;
+    }
+    &__img {
+      .absolute{
+        left: 70%;
+      }
     }
   }
   @include responsive(s){
@@ -49,6 +60,11 @@
       p{
         width: 100%;
         line-height: 140%;
+      }
+    }
+    &__img {
+      .absolute{
+        left: 70%;
       }
     }
   }

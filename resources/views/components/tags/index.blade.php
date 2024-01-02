@@ -1,9 +1,13 @@
-<ul class="ul features__cards">
-  {{-- Como chamar foreach com laravel. Diretiva --}}
-  @foreach ($tags as $tag)
+<ul class="ul features__cards scroll-horizontal">
+  @php
+    $colors = ['#9CD3FF', '#864FCC', '#EA5C5C', '#FFDE68'];
+    shuffle($colors);
+  @endphp
+
+  @foreach ($tags as $key => $tag)
     <li class="center">
-      <span class="border-card">
-        +{{ $tag['number'] }}
+      <span class="border-card color{{ ($key % 4) + 1 }}" style="background-color: {{ $colors[$key % 4] }}">
+        {{ $tag['number'] }}
       </span>
       <p class="p">
         {{ $tag['text'] }}
@@ -11,8 +15,3 @@
     </li>
   @endforeach
 </ul>
-
-<script>
-  // Agora o front consegue pegar com segurança os dados
-  const tags = {{ Js::from($tags) }};
-</script>

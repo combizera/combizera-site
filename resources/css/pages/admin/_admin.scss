@@ -1,0 +1,58 @@
+.admin{
+  min-height: 600px;
+  .secao{
+    padding: 20px 0;
+  }
+  &__nav{
+    padding: 40px 0 10px 0;
+    ul{
+      display: flex;
+      gap: 40px;
+    }
+    .active{
+      font-weight: 700;
+    }
+  }
+
+  &__item{
+    padding: 20px 10px 20px 0;
+    align-items: center;
+    .btn{
+      background-color: $white;
+      padding: 5px;
+    }
+    button{
+      padding: 5px;
+    }
+    &-buttons{
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__form{
+    label{
+      margin-top: 10px;
+    }
+    button{
+      display: block;
+      margin-top: 20px;
+      min-width: 350px;
+      font-size: 1.125rem !important;
+      // text-transform: uppercase;
+    }
+  }
+
+  &__content{
+    .ul{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+
+  }
+  @include responsive(m){
+    padding: 0 20px;
+  }
+}

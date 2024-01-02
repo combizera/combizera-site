@@ -1,4 +1,4 @@
-<x-layout title="Login">
+<x-layout.admin title="Login">
   <main class="index bg-pattern" style="--icon-url:url('{{ Vite::image('icons/pattern-dot.svg') }}')">
 
     <section class="login container">
@@ -8,7 +8,7 @@
         @csrf
         <div class="form__item">
           <label for="email">Email</label>
-          <input required type="email" name="email" id="email" placeholder="ygor@gmail.com.br">
+          <input required type="email" name="email" id="email" placeholder="ygor@email.com.br">
         </div>
 
         <div class="form__item">
@@ -35,4 +35,4 @@
       @endif
     </section>
   </main>
-</x-layout>
+</x-layout.admin>

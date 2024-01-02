@@ -1,0 +1,54 @@
+.skills{
+  padding: 60px 40px;
+  article{
+    padding: 40px 0
+  }
+  .h2{
+    margin-bottom: 40px;
+  }
+  .h4{
+    font-size: 2rem;
+  }
+  &__txt{
+    margin-right: 160px;
+  }
+  &__group{
+    border-top: 2px solid $dark;
+    padding-top: 20px;
+    margin: 20px 0;
+    &.grid-2{
+      gap: 60px;
+      justify-items: stretch;
+    }
+  }
+  &__list{
+    &.grid-2{
+      gap: 10px 20px;
+      justify-items: stretch;
+    }
+    li{
+      &::before{
+        content: "-";
+      }
+      &::after{
+        content: ";";
+      }
+    }
+  }
+  @include responsive(m){
+    &__txt{
+      margin-right: 0;
+    }
+    &__list{
+      &.grid-2{
+        gap: 20px;
+      }
+    }
+  }
+  @include responsive(s){
+    padding: 60px 20px;
+    &__txt{
+      margin-right: 0;
+    }
+  }
+}

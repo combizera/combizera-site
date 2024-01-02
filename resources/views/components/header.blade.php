@@ -1,7 +1,16 @@
 <header id="header" class="border-bottom">
   @auth
   <div class="header__admin">
-    vc esta logado
+    <nav class="header__nav container">
+      <ul class="ul">
+        <li>
+          <a href="{{ route('admin') }}">Editar Seções</a>
+        </li>
+        <li>
+          <a href="">Deslogar</a>
+        </li>
+      </ul>
+    </nav>
   </div>
   @endauth
 

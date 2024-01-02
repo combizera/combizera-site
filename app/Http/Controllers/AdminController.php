@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginFormRequest;
+use App\Models\Depoimento;
+use App\Models\Skill;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,6 +19,7 @@ class AdminController extends Controller
       return view('admin/login');
     }
   }
+
   public function auth(LoginFormRequest $request)
   {
     if (Auth::attempt($request->validated())) {
@@ -28,6 +32,14 @@ class AdminController extends Controller
   }
   public function index()
   {
-    return view('admin/index');
+    $tags = Tag::all();
+    $skills = Skill::all();
+    $depoimentos = Depoimento::all();
+
+    return view('admin/index', [
+      'tags' => $tags,
+      'skills' => $skills,
+      'depoimentos' => $depoimentos
+    ]);
   }
 }

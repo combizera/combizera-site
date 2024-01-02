@@ -1,5 +1,6 @@
 .features {
   &__cards{
+    overflow: hidden;
     display: flex;
     li{
       background-color: $background;
@@ -7,9 +8,13 @@
       gap: 20px;
       border-right: 2px solid $dark;
     }
+    p{
+      font-size: 1.25rem;
+      text-wrap: nowrap;
+    }
     span{
+      font-size: 1.75rem;
       padding: 10px;
-      background-color: tomato;
     }
   }
 }
