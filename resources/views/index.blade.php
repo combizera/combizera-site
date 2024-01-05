@@ -82,7 +82,7 @@
       <h2>Depoimentos</h2>
       <ul class="grid-3 ul">
         <li class="border-card">
-          <img src="{{ Vite::image('/logos/logo-advbox.svg') }}" alt="Logotipo da ADVBOX" />
+          <img src="{{ Vite::image('logos/logo-advbox.svg') }}" alt="Logotipo da ADVBOX" />
           <p class="depo__depo">Ygor é um profissional de excelência. Além de ser muito atencioso, é extremamente dedicado a ouvir as necessidades dos clientes e busca sempre atendê-las com o maior cuidado possível. Profissional nota 10!</p>
           <div class="depo__profile">
             <img src="{{ Vite::image('ygor-combi.png') }}" alt="Foto do Ygor Combi" />
@@ -93,7 +93,7 @@
           </div>
         </li>
         <li class="border-card">
-          <img src="{{ Vite::image('/logos/logo-advbox.svg') }}" alt="Logotipo da ADVBOX" />
+          <img src="{{ Vite::image('logos/logo-advbox.svg') }}" alt="Logotipo da ADVBOX" />
           <p class="depo__depo">Ygor é um profissional de excelência. Além de ser muito atencioso, é extremamente dedicado a ouvir as necessidades dos clientes e busca sempre atendê-las com o maior cuidado possível. Profissional nota 10!</p>
           <div class="depo__profile">
             <img src="{{ Vite::image('ygor-combi.png') }}" alt="Foto do Ygor Combi" />
@@ -104,7 +104,7 @@
           </div>
         </li>
         <li class="border-card">
-          <img src="{{ Vite::image('/logos/logo-advbox.svg') }}" alt="Logotipo da ADVBOX" />
+          <img src="{{ Vite::image('logos/logo-advbox.svg') }}" alt="Logotipo da ADVBOX" />
           <p class="depo__depo">Ygor é um profissional de excelência. Além de ser muito atencioso, é extremamente dedicado a ouvir as necessidades dos clientes e busca sempre atendê-las com o maior cuidado possível. Profissional nota 10!</p>
           <div class="depo__profile">
             <img src="{{ Vite::image('ygor-combi.png') }}" alt="Foto do Ygor Combi" />
