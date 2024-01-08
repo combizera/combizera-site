@@ -7,11 +7,19 @@
           <a href="{{ route('admin') }}">Editar Seções</a>
         </li>
         <li>
-          <a href="">Deslogar</a>
+          <a
+            href="{{ route('logout')}}"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Deslogar
+          </a>
         </li>
       </ul>
     </nav>
   </div>
+
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+  </form>
   @endauth
 
   <div class="header container space-between">
@@ -37,9 +45,9 @@
       </ul>
     </nav>
 
-    {{-- BOTÃO --}}
-    <div class="header__button">
+    {{-- IDIOMA --}}
+    {{-- <div class="header__button">
       <button>Idioma</button>
-    </div>
+    </div> --}}
   </div>
 </header>
