@@ -26,7 +26,7 @@
     </section>
 
     {{-- PROJECTS --}}
-    <section id="projects" class="bg-white projects">
+    <section id="projetos" class="bg-white projects">
       <div class="container">
         <h2>Projetos</h2>
         <nav>
@@ -78,7 +78,7 @@
     </section>
 
     {{-- DEPOIMENTOS --}}
-    <section id="testimonials" class="depo container">
+    <section id="depoimentos" class="depo container">
       <h2>Depoimentos</h2>
       <ul class="grid-3 ul">
         <li class="border-card">

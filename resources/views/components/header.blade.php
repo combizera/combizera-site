@@ -26,13 +26,13 @@
     <nav class="header__nav">
       <ul class="ul">
         <li>
-          <a href="">Link 1</a>
+          <a href="#projetos">Projetos</a>
         </li>
         <li>
-          <a href="">Link 2</a>
+          <a href="#depoimentos">Depoimentos</a>
         </li>
         <li>
-          <a href="">Link 3</a>
+          <a href="#skills">Skills</a>
         </li>
       </ul>
     </nav>

@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ $title ?? config('app.name') }}</title>
     @vite('resources/css/app.scss')
+    <meta name=”description” content="Product Manager apaixonado por inovação e impacto positivo. Desenvolvedor Front End especializado em HTML, CSS, JavaScript e PHP, com experiência consolidada. Líder operacional no marketing da ADVBOX, aplicando conhecimentos de Product Management para impulsionar estratégias eficazes.">
 
-    <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1JN2HCGJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    <!-- End Google Tag Manager -->
+      gtag('config', 'G-4C1JN2HCGJ');
+    </script>
 
     {{-- TIPOGRAFIA --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +26,6 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body @isset($bodyClass) @class($bodyClass) @endisset>
-    <!-- Google Tag Manager (noscript) -->
-
-    <!-- End Google Tag Manager (noscript) -->
 
     {{-- HEADER --}}
     <x-header></x-header>

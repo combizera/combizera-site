@@ -6,12 +6,50 @@
   &__nav{
     ul{
       display: flex;
-      gap: 20px;
+      gap: 40px;
+    }
+    li{
+      padding: 10px;
+      @extend .border;
+      border-color: $white !important;
+      &:hover{
+        @extend .border-card;
+        border-color: $dark !important;
+      }
     }
   }
   &__admin{
     padding: 10px 20px;
     background-color: $dark;
     color: $white;
+  }
+  @include responsive(s){
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    &.space-between{
+      justify-content: center;
+    }
+    &__logo{
+      svg{
+        width: 200px;
+        height: 30px;
+      }
+    }
+    &__nav{
+      ul{
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      li{
+        padding: 10px;
+        border: 2px solid $dark !important;
+      }
+    }
+    &__button{
+      display: none;
+    }
   }
 }
