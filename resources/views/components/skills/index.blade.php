@@ -1,8 +1,7 @@
 <ul class="ul">
   <h2 class="h2">Skills</h2>
-
   {{-- SOFT --}}
-  <article>
+  <li class="article">
     <h4 class="h4">Soft Skills</h4>
     <div class="skills__group grid-2">
       <div class="skills__txt">
@@ -16,10 +15,10 @@
 
       </ul>
     </div>
-  </article>
+  </li>
 
   {{-- HARD --}}
-  <article>
+  <li class="article">
     <h4 class="h4">Hard Skills</h4>
     <div class="skills__group grid-2">
       <div class="skills__txt">
@@ -35,8 +34,7 @@
 
       </ul>
     </div>
-  </article>
-
+  </li>
 </ul>
 
 
