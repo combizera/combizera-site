@@ -25,7 +25,7 @@
   <div class="header container space-between">
     {{-- LOGO --}}
     <div class="header__logo">
-      <a href="/">
+      <a href="/" aria-label="Logo Combizera">
         <x-icons.logo></x-icons>
       </a>
     </div>
