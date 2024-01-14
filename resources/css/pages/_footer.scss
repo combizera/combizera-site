@@ -17,6 +17,20 @@
   }
   &__box{
     padding: 20px;
+    ul a{
+      position: relative;
+      &:hover{
+        &::before{
+          left: -10px;
+        }
+      }
+      &::before{
+        content: "- ";
+        position: absolute;
+        top: 2px;
+        left: -15px;
+      }
+    }
   }
   &__social{
     padding: 20px;
