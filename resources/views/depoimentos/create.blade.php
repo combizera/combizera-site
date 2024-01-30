@@ -1,5 +1,5 @@
 <x-layout.admin title="Novo Depoimento" bodyClass="opdidas">
-  <form class="admin__form" action="{{ route('depoimentos.save') }}" method="post">
+  <form class="admin__form" action="{{ route('depoimentos.save') }}" method="post" enctype="multipart/form-data">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
     <div class="">

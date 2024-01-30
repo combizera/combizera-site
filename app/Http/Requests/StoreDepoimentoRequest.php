@@ -27,8 +27,10 @@ class StoreDepoimentoRequest extends FormRequest
       'person_name' => ['required'],
       'person_function' => ['required'],
       'person_text' => ['required'],
-      'person_img' => ['required'],
-      'office_logo' => ['required']
+      // 'person_img' => ['required', 'file'],
+      // 'office_logo' => ['required', 'file']
+      'person_img' => ['required', 'image', 'mimes:png,jpg,webp', 'max:2098'],
+      'office_logo' => ['required', 'image', 'mimes:png,jpg,webp', 'max:2098']
     ];
   }
 }
