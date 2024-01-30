@@ -6,7 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ $title ?? config('app.name') }}</title>
     @vite('resources/css/app.scss')
-    <meta name=”description” content="Product Manager apaixonado por inovação e impacto positivo. Desenvolvedor Front End especializado em HTML, CSS, JavaScript e PHP, com experiência consolidada. Líder operacional no marketing da ADVBOX, aplicando conhecimentos de Product Management para impulsionar estratégias eficazes.">
+    <meta name=”description” content="Product Manager apaixonado por inovação e impacto positivo. Líder operacional no marketing da ADVBOX, aplicando conhecimentos de Product Management para impulsionar estratégias eficazes.">
+
+    {{-- OGTAG --}}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Combizera" />
+    <meta property="og:image" content="{{ asset('image-preview.png')}}" />
+    <meta property="og:url" content="https://combizera.com" />
+    <meta property="og:site_name" content="Combizera" />
+    <meta property="og:description" content="Product Manager apaixonado por inovação e impacto positivo. Líder operacional no marketing da ADVBOX, aplicando conhecimentos de Product Management para impulsionar estratégias eficazes." />
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1JN2HCGJ"></script>
