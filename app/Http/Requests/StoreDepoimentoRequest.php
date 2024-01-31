@@ -27,10 +27,18 @@ class StoreDepoimentoRequest extends FormRequest
       'person_name' => ['required'],
       'person_function' => ['required'],
       'person_text' => ['required'],
-      // 'person_img' => ['required', 'file'],
-      // 'office_logo' => ['required', 'file']
-      'person_img' => ['required', 'image', 'mimes:png,jpg,webp', 'max:2098'],
-      'office_logo' => ['required', 'image', 'mimes:png,jpg,webp', 'max:2098']
+      'person_img' => ['required', 'image', 'mimes:png,jpg,webp,svg,jpeg', 'max:2098'],
+      'office_logo' => ['required', 'image', 'mimes:png,jpg,webp,svg,jpeg', 'max:2098']
+    ];
+  }
+  public function attributes(): array
+  {
+    return [
+      'person_name' => 'Nome',
+      'person_function' => 'Função',
+      'person_text' => 'Depoimento',
+      'person_img' => 'Foto da Pessoa',
+      'office_logo' => 'Logo da Empresa'
     ];
   }
 }

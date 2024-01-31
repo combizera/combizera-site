@@ -10,3 +10,12 @@
   font-weight: 700 !important;
   font-style: italic !important;
 }
+
+.txt-error{
+  font-weight: 700;
+  color: #d00000;
+  margin-top: 10px;
+  &::before{
+    content: "🚩 ";
+  }
+}
