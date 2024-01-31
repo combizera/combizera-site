@@ -30,6 +30,10 @@ Route::post('/login', [AdminController::class, 'auth'])->name('login');
 Route::middleware('auth')->group(function () {
   Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');
 
+  // LOGOUT
+  Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+
+
   // TAGS
   Route::get('/tags/criar', [TagController::class, 'create'])->name('tags.create');
   Route::post('/tags/save', [TagController::class, 'store'])->name('tags.save');

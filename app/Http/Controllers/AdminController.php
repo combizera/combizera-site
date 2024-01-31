@@ -42,4 +42,10 @@ class AdminController extends Controller
       'depoimentos' => $depoimentos
     ]);
   }
+
+  public function logout()
+  {
+    Auth::logout();
+    return redirect('/');
+  }
 }

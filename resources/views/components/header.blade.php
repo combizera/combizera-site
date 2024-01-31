@@ -7,17 +7,25 @@
           <a href="{{ route('admin') }}">Editar Seções</a>
         </li>
         <li>
-          <a href="">Deslogar</a>
+          <a
+            href="{{ route('logout')}}"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Deslogar
+          </a>
         </li>
       </ul>
     </nav>
   </div>
+
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+  </form>
   @endauth
 
   <div class="header container space-between">
     {{-- LOGO --}}
     <div class="header__logo">
-      <a href="/">
+      <a href="/" aria-label="Logo Combizera">
         <x-icons.logo></x-icons>
       </a>
     </div>
@@ -26,20 +34,20 @@
     <nav class="header__nav">
       <ul class="ul">
         <li>
-          <a href="">Link 1</a>
+          <a href="#projetos">Projetos</a>
         </li>
         <li>
-          <a href="">Link 2</a>
+          <a href="#depoimentos">Depoimentos</a>
         </li>
         <li>
-          <a href="">Link 3</a>
+          <a href="#skills">Skills</a>
         </li>
       </ul>
     </nav>
 
-    {{-- BOTÃO --}}
-    <div class="header__button">
+    {{-- IDIOMA --}}
+    {{-- <div class="header__button">
       <button>Idioma</button>
-    </div>
+    </div> --}}
   </div>
 </header>

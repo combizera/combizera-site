@@ -10,6 +10,9 @@
             <li>
               <a href="#" class="">Skills</a>
             </li>
+            <li>
+              <a href="#" class="">Depoimentos</a>
+            </li>
           </ul>
         </nav>
       @endauth

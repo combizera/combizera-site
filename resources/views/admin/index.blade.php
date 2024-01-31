@@ -74,7 +74,7 @@
 
       <li class="admin__item space-between border-bottom" data-route="{{ route('depoimentos.delete', $depoimento) }}">
         <div href="{{ route('depoimentos.edit', $depoimento) }}">
-          {{ $depoimento->text }}
+          {{ $depoimento->person_text }}
         </div>
 
         <div class="admin__item-buttons">
