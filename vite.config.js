@@ -8,7 +8,8 @@ export default defineConfig({
             [
               'resources/css/app.scss',
               'resources/js/app.js',
-              'resources/js/modal.js'
+              'resources/js/modal.js',
+              'resources/js/admin-accordion.js'
             ],
             refresh: true,
         }),
