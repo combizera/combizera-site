@@ -1,4 +1,4 @@
-<x-layout title="Ygor Combi | Product Manager">
+<x-layout title="Combi | Product Manager">
   <main class="index bg-pattern" style="--icon-url:url('{{ Vite::image('icons/pattern-dot.svg') }}')">
 
     {{-- HERO --}}
