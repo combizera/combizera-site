@@ -6,7 +6,7 @@
         src="{{ Storage::url($depoimento['office_logo']) }}"
         alt="Logotipo da Empresa" />
       <p class="depo__depo">
-        {{ $depoimento['person_text'] }}
+        {!! Str::replace("\n", '<br>', $depoimento['person_text']) !!}
       </p>
       <div class="depo__profile">
         <img
