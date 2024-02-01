@@ -8,21 +8,21 @@
 
     <div>
       <label for="person_name">Nome</label>
-      <input type="text" id="person_name" name="person_name" value="{{ old('person_name') }}">
+      <input type="text" id="person_name" name="person_name" value="{{ old('person_name') }}" placeholder="Ex: Andressa Spohr">
       @error('person_name')
         <p class="txt-error">{{ $message }}</p>
       @enderror
     </div>
     <div>
       <label for="person_function">Função na Empresa</label>
-      <input type="text" id="person_function" name="person_function" value="{{ old('person_function') }}">
+      <input type="text" id="person_function" name="person_function" value="{{ old('person_function') }}" placeholder="Ex: CMO">
       @error('person_function')
         <p class="txt-error">{{ $message }}</p>
       @enderror
     </div>
     <div>
       <label for="person_text">Depoimento</label>
-      <textarea name="person_text" id="person_text" cols="30" rows="10">{{ old('person_text') }}</textarea>
+      <textarea name="person_text" id="person_text" cols="30" rows="10" placeholder="Ex: Pô, o guri é bom">{{ old('person_text') }}</textarea>
       @error('person_text')
         <p class="txt-error">{{ $message }}</p>
       @enderror

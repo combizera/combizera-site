@@ -7,7 +7,7 @@
     <x-layout.buttons />
 
     <label for="text">Texto</label>
-    <input type="text" id="text" name="text">
+    <input type="text" id="text" name="text" placeholder="Ex: SEO Técnico">
     <label for="type">Tipo</label>
     <select id="type" name="type">
       <option value="hard">Hard Skill</option>
