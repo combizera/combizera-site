@@ -45,7 +45,7 @@
         <nav class="footer__social">
           <ul class="ul grid-3">
             <li>
-              <a target="_blank" href="https://instagram/combizera">
+              <a target="_blank" href="https://instagram.com/combizera">
                 <x-icons.insta></x-icons.insta>
                 Instagram
                 <svg id="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@
               </a>
             </li>
             <li>
-              <a target="_blank" href="mailto:ola@combizera.com">
+              <a target="_blank" href="mailto:ycombi349@gmail.com">
                 <x-icons.email></x-icons.email>
                 Email
                 <svg id="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

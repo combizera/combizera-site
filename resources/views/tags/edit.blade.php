@@ -3,8 +3,10 @@
   <form class="admin__form" action="{{ route('tags.update', $tag) }}" method="POST">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
-
     @method ('PUT')
+
+    {{-- BOTÕES DE FECHAR --}}
+    <x-layout.buttons />
 
     <label for="number">Número</label>
     <input type="text" id="number" name="number" value="{{ $tag->number }}">

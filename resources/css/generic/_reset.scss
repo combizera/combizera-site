@@ -32,7 +32,7 @@ img {
 	object-fit: cover;
 }
 
-span, input, label, button, li{
+span, input, label, button, li, select{
   font-family: $font-pri;
 }
 
@@ -42,7 +42,7 @@ label{
   margin-bottom: 10px;
 }
 
-input{
+input, textarea, select{
   font-size: 1rem;
   border-radius: 0;
   border: 2px solid $dark !important;

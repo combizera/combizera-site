@@ -3,8 +3,11 @@
   <form class="admin__form" action="{{ route('skills.update', $skill) }}" method="POST">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
-
     @method ('PUT')
+
+    {{-- BOTÕES DE FECHAR --}}
+    <x-layout.buttons />
+
     <label for="text">Texto</label>
     <input type="text" id="text" name="text">
     <label for="type">Tipo</label>

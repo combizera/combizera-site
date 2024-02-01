@@ -1,10 +1,13 @@
 <x-layout.admin>
 
+
   <form class="admin__form" action="{{ route('depoimentos.update', $depoimento) }}" method="POST" enctype="multipart/form-data">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
-
     @method ('PUT')
+
+    {{-- BOTÕES DE FECHAR --}}
+    <x-layout.buttons />
 
     <div>
       <label for="person_name">Nome</label>

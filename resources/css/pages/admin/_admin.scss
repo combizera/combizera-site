@@ -28,18 +28,55 @@
       display: flex;
       gap: 20px;
     }
+    &-tag{
+      display: inline-block;
+      background-color: $white;
+      padding: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      @extend .border;
+    }
+    &-depo{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p{
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+      span{
+        font-weight: 400;
+        font-size: 1rem;
+      }
+      img{
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+      }
+    }
   }
 
   &__form{
+    max-width: 500px;
+    margin: 0 auto;
+    .btn-close{
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .btns{
+      justify-content: flex-end;
+    }
     label{
       margin-top: 10px;
     }
     button{
       display: block;
-      margin-top: 20px;
-      min-width: 350px;
       font-size: 1.125rem !important;
-      // text-transform: uppercase;
+      margin: 20px 0;
+    }
+    input, textarea, button, select{
+      min-width: 500px;
+      max-width: 800px;
     }
   }
 

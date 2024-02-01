@@ -2,6 +2,10 @@
   <form class="admin__form" action="{{ route('skills.save') }}" method="post">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
+
+    {{-- BOTÕES DE FECHAR --}}
+    <x-layout.buttons />
+
     <label for="text">Texto</label>
     <input type="text" id="text" name="text">
     <label for="type">Tipo</label>

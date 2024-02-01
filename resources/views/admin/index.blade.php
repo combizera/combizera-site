@@ -42,8 +42,10 @@
 
       <li class="admin__item space-between border-bottom" data-route="{{ route('skills.delete', $skill) }}">
         <div href="{{ route('skills.edit', $skill) }}">
+          <span class="admin__item-tag">
+            {{ $skill->type }}
+          </span>
           {{ $skill->text }}
-          {{ $skill->type }}
         </div>
 
         <div class="admin__item-buttons">
@@ -74,7 +76,15 @@
 
       <li class="admin__item space-between border-bottom" data-route="{{ route('depoimentos.delete', $depoimento) }}">
         <div href="{{ route('depoimentos.edit', $depoimento) }}">
-          {{ $depoimento->person_text }}
+          <div class="admin__item-depo">
+            <img src="{{ Storage::url($depoimento['person_img']) }}" alt="{{ $depoimento->person_name }}">
+            <p class="flex-column">
+              {{ $depoimento->person_name }}
+              <span>
+                {{ $depoimento->person_function }}
+              </span>
+            </p>
+          </div>
         </div>
 
         <div class="admin__item-buttons">

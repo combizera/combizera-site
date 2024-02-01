@@ -26,6 +26,18 @@
   background: $white;
 }
 
+.btn-white{
+  background-color: $white;
+}
+
+.btn-close{
+  padding: 3px 10px;
+}
+
+.btn-red{
+  background-color: #E14040;
+}
+
 .link{
   position: relative;
   &::before {

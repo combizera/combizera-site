@@ -2,6 +2,10 @@
   <form class="admin__form" action="{{ route('tags.save') }}" method="post">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
+
+    {{-- BOTÕES DE FECHAR --}}
+    <x-layout.buttons />
+
     <label for="number">Número</label>
     <input type="text" id="number" name="number">
     <label for="text">Texto</label>

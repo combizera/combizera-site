@@ -2,6 +2,10 @@
   <form class="admin__form" action="{{ route('depoimentos.save') }}" method="post" enctype="multipart/form-data">
     {{-- Diretiva que cuida da segurança --}}
     @csrf
+
+    {{-- BOTÕES DE FECHAR --}}
+    <x-layout.buttons />
+
     <div>
       <label for="person_name">Nome</label>
       <input type="text" id="person_name" name="person_name" value="{{ old('person_name') }}">
