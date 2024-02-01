@@ -9,12 +9,15 @@
       gap: 40px;
     }
     li{
-      padding: 10px;
       @extend .border;
       border-color: $white !important;
       &:hover{
         @extend .border-card;
         border-color: $dark !important;
+      }
+      a{
+        padding: 10px;
+        display: block;
       }
     }
   }

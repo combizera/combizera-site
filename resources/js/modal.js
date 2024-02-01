@@ -2,7 +2,7 @@ const $adminLi = document.querySelectorAll('.admin__item');
 const $modal = document.querySelector('.modal__wrapper');
 
 const $modalForm = $modal.querySelector('form');
-const $modalClose = $modal.querySelector('.modal__close');
+const $modalClose = $modal.querySelectorAll('.modal__close');
 
 $adminLi.forEach(function(item){
   const $deleteButton = item.querySelector('.delete');
@@ -12,9 +12,12 @@ $adminLi.forEach(function(item){
   })
 })
 
-$modalClose.addEventListener("click", function(){
-  $modal.classList.remove('active');
-})
+$modalClose.forEach(function(closeButton){
+  closeButton.addEventListener("click", function(){
+    $modal.classList.remove('active');
+  });
+});
+
 
 document.addEventListener("keydown", function(event){
   if(event.key == "Escape"){

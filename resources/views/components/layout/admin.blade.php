@@ -5,13 +5,13 @@
         <nav class="admin__nav border-bottom">
           <ul class="ul">
             <li class="active">
-              <a href="#" class="">Tags</a>
+              <a href="#">Tags</a>
             </li>
             <li>
-              <a href="#" class="">Skills</a>
+              <a href="#">Skills</a>
             </li>
             <li>
-              <a href="#" class="">Depoimentos</a>
+              <a href="#">Depoimentos</a>
             </li>
           </ul>
         </nav>

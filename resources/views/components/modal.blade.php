@@ -28,7 +28,7 @@
           <button class="btn btn-pri button-delete">
             Apagar
           </button>
-          <a href="#" class="btn">Cancelar</a>
+          <a href="#" class="btn modal__close">Cancelar</a>
         </div>
       </form>
     </div>
