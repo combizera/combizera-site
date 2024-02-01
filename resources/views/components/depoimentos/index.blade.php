@@ -4,7 +4,8 @@
       <img
         loading="lazy"
         src="{{ Storage::url($depoimento['office_logo']) }}"
-        alt="Logotipo da Empresa" />
+        alt="Logotipo da Empresa"
+        class="depo__logo" />
       <p class="depo__depo">
         {!! Str::replace("\n", '<br>', $depoimento['person_text']) !!}
       </p>
