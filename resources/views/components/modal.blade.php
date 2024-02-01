@@ -1,7 +1,7 @@
 <div class="modal__wrapper center">
   <div class="modal">
     <div class="modal__header border-bottom space-between">
-      <p>deletar.exe</p>
+      <p>delete.exe</p>
       <button class="modal__close">
         <img src="{{ Vite::image('icons/icon-close.svg') }}" alt="Fechar Modal" />
       </button>
