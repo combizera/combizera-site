@@ -3,6 +3,7 @@
   h1{
     font-size: 6.25rem !important;
     font-weight: 400;
+    letter-spacing: -9px;
   }
   h2{
     font-weight: 400;
@@ -13,6 +14,14 @@
       &:hover{
         text-decoration: underline;
       }
+    }
+  }
+  &__tit{
+    position: relative;
+    .absolute{
+      top: -10px;
+      left: 20px;
+      width: 40px;
     }
   }
   .btns{

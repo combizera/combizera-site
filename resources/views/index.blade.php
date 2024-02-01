@@ -4,7 +4,10 @@
     {{-- HERO --}}
     <section id="hero" class="hero container grid-2">
       <div class="flex-column">
-        <h1>&lt;combi<span class="bold-italic">z</span>era/&gt;</h1>
+        <div class="hero__tit">
+          <img src="{{ Vite::image('icons/icon-looping.svg') }}" alt="Elemento Auxiliar - Looping" class="absolute">
+          <h1>&lt;combi<span class="bold-italic">z</span>era/&gt;</h1>
+        </div>
         <div class="hero__txt">
           <h2>
             Líder Operacional na
