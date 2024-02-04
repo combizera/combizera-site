@@ -61,7 +61,7 @@
       line-height: 140%;
   } @else if $size == p and $device == mobile {
       font-size: 1rem;
-      line-height: 2rem;
+      line-height: 140%;
   }
 
   // p-2

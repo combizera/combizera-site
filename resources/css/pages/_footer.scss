@@ -75,12 +75,22 @@
     }
   }
   @include responsive(s){
-    &__box{
+    #footer-contato{
       display: none;
+    }
+    &__box{
+      text-align: center;
+      grid-row: 2;
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
     }
     &__social{
       border-left: 0;
       border-right: 0;
+      border-bottom: 2px solid $dark;
       .grid-3{
         grid-template-columns: 1fr 1fr;
       }

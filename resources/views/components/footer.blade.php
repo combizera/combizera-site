@@ -101,7 +101,7 @@
           </ul>
         </nav>
 
-      <div class="footer__box">
+      <div id="footer-contato" class="footer__box">
         <h6>Contato</h6>
         <div>
           <p>Telefone</p>

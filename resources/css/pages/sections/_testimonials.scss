@@ -41,5 +41,8 @@
   }
   @include responsive(s){
     padding: 120px 20px;
+    h2{
+      text-align: center;
+    }
   }
 }

@@ -88,3 +88,22 @@ footer, header, hgroup, menu, nav, section {
 ::-moz-scrollbar-track {
   background-color: $white;
 }
+
+// SELECTION
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+label::selection,
+span::selection,
+strong::selection,
+br::selection,
+p::selection,
+img::selection,
+a::selection,
+li::selection {
+  background-color: $dark;
+  color: $white;
+}

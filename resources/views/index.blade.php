@@ -82,7 +82,7 @@
 
     {{-- DEPOIMENTOS --}}
     <section id="depoimentos" class="depo container">
-      <h2>Depoimentos</h2>
+      <h2>Depoi<wbr>mentos</h2>
       <x-depoimentos.index :depoimentos="$depoimentos" />
 
     </section>

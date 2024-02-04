@@ -1,6 +1,13 @@
 .btns {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  @include responsive(s){
+    .btn{
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 .btn {
