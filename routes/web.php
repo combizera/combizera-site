@@ -26,15 +26,27 @@ Route::get('/404', [SiteController::class, 'error'])->name('error-404');
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/login', [AdminController::class, 'auth'])->name('login');
 
-
+/*
+|--------------------------------------------------------------------------
+| ADMIN
+|--------------------------------------------------------------------------
+*/
 Route::middleware('auth')->group(function () {
   Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');
 
-  // LOGOUT
+  /*
+  |--------------------------------------------------------------------------
+  | LOGOUT
+  |--------------------------------------------------------------------------
+  */
   Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
 
-  // TAGS
+  /*
+  |--------------------------------------------------------------------------
+  | TAGS
+  |--------------------------------------------------------------------------
+  */
   Route::get('/tags/criar', [TagController::class, 'create'])->name('tags.create');
   Route::post('/tags/save', [TagController::class, 'store'])->name('tags.save');
 
@@ -42,7 +54,11 @@ Route::middleware('auth')->group(function () {
   Route::put('/admin/tags/{tag}', [TagController::class, 'update'])->name('tags.update');
   Route::delete('/admin/tags/{tag}', [TagController::class, 'delete'])->name('tags.delete');
 
-  // SKILLS
+  /*
+  |--------------------------------------------------------------------------
+  | SKILLS
+  |--------------------------------------------------------------------------
+  */
   Route::get('/skills/criar', [SkillController::class, 'create'])->name('skills.create');
   Route::post('/skills/save', [SkillController::class, 'store'])->name('skills.save');
 
@@ -50,7 +66,11 @@ Route::middleware('auth')->group(function () {
   Route::put('/admin/skills/{skill}', [SkillController::class, 'update'])->name('skills.update');
   Route::delete('/admin/skills/{skill}', [SkillController::class, 'delete'])->name('skills.delete');
 
-  // DEPOIMENTOS
+  /*
+  |--------------------------------------------------------------------------
+  | DEPOIMENTOS
+  |--------------------------------------------------------------------------
+  */
   Route::get('/depoimentos/criar', [DepoimentoController::class, 'create'])->name('depoimentos.create');
   Route::post('/depoimentos/save', [DepoimentoController::class, 'store'])->name('depoimentos.save');
 
