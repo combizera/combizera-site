@@ -19,7 +19,6 @@
     padding: 20px;
     ul a{
       position: relative;
-      z-index: -1;
       &:hover{
         &::before{
           left: -10px;
