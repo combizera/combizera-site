@@ -6,7 +6,7 @@
       <div class="flex-column">
         <div class="hero__tit">
           <img src="{{ Vite::image('icons/icon-looping.svg') }}" alt="Elemento Auxiliar - Looping" class="absolute">
-          <h1>&lt;combi<span class="bold-italic">z</span>era/&gt;</h1>
+          <h1>&lt;combi<wbr><span class="bold-italic">z</span>era/&gt;</h1>
         </div>
         <div class="hero__txt">
           <h2>
