@@ -26,7 +26,11 @@
 
     {{-- MENU --}}
     <div class="header__button">
-      <button>Menu</button>
+      <button class="active">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </button>
     </div>
   </div>
 </header>

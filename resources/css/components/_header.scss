@@ -20,21 +20,42 @@
         display: block;
       }
     }
+    &.active{
+      display: block !important;
+      position: absolute;
+      background-color: $white;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      height: calc(100vh - 70px);
+      padding: 40px;
+      animation: descer 1s ease;
+      li{
+        @extend .btn;
+      }
+    }
+  }
+  &__button{
+    display: none;
+    span{
+      font-weight: 700;
+      display: block;
+    }
   }
   @include responsive(s){
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    &.space-between{
-      justify-content: center;
+    &.container{
+      padding: 10px 20px;
     }
     &__logo{
       svg{
         width: 200px;
         height: 30px;
+        margin-left: -20px;
       }
     }
     &__nav{
+      display: none;
       ul{
         gap: 20px;
         flex-wrap: wrap;
@@ -47,7 +68,16 @@
       }
     }
     &__button{
-      display: none;
+      display: block;
     }
+  }
+}
+
+@keyframes descer {
+  from {
+    transform: translateY(-1000%);
+  }
+  to{
+    transform: translateY(0);
   }
 }
