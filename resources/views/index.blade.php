@@ -33,39 +33,125 @@
       <div class="container">
         <h2>Projetos</h2>
         <nav>
-          <ul class="ul grid-3">
-            <li class="border-card">
-              <a href="">
-                <div class="projects__img">
-                  <img loading="lazy" src="{{ Vite::image('works/bortoluzzi.png') }}" alt="Projeto da Bortoluzzi Advocacia" />
-                </div>
-                <div class="projects__txt">
-                  <span>Bortoluzzi Advocacia</span>
-                  <p>Projeto desenvolvido para o evento anual da ADVBOX. Sistema em Laravel e com integração com Stripe.</p>
-                </div>
-              </a>
+          <ul class="ul projects__list flex-column">
+            {{-- BRASIL JÁ --}}
+            <li class="border-card grid-2 projects__item bg-pattern">
+              <div class="projects__img">
+                <img loading="lazy" src="{{ Vite::image('mockup-brasil-ja.png') }}" alt="Mockup - Projeto Brasil Já" />
+              </div>
+              <div class="projects__txt flex-column">
+                <span class="subtit">Uma revista <strong>brasileira</strong> no mundo</span>
+                <h5 class="h5">Brasil Já</h5>
+                <p>
+                  Neste projeto participei ativamente de todas as etapas da construção, tanto do site, como do sistema de leitura da Revista Brasil Já em parceria com o Jhonatan David.
+                  <br><br>
+                  Sistema desenvolvido em Laravel, com paywall, integrações com meios de pagamento (feito através de Stripe) e diversos outros pormenores.
+                </p>
+                <ul class="ul projects__icons grid-3">
+                  <li>
+                    <span class="material-symbols-outlined">
+                      animation
+                    </span>
+                    <h6 class="h6">Animações</h6>
+                    <p>Utilização da Biblioteca GSAP para animações e interações no site</p>
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined">
+                      smart_toy
+                    </span>
+                    <h6 class="h6">SEO</h6>
+                    <p>Estruturação do projeto com foco na otimização do SEO</p>
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined">
+                      responsive_layout
+                    </span>
+                    <h6 class="h6">Web</h6>
+                    <p>Projeto web totalmente responsivo</p>
+                  </li>
+                </ul>
+                <a href="#projeto-1" class="btn btn-pri">Ver Projeto</a>
+              </div>
             </li>
-            <li class="border-card">
-              <a href="">
-                <div class="projects__img">
-                  <img loading="lazy" src="{{ Vite::image('works/bortoluzzi.png') }}" alt="Projeto da Bortoluzzi Advocacia" />
-                </div>
-                <div class="projects__txt">
-                  <span>Bortoluzzi Advocacia</span>
-                  <p>Projeto desenvolvido para o evento anual da ADVBOX. Sistema em Laravel e com integração com Stripe.</p>
-                </div>
-              </a>
+
+            {{-- BILIOTECA DE PADRÕES --}}
+            <li class="border-card grid-2 projects__item bg-pattern">
+              <div class="projects__img">
+                <img loading="lazy" src="{{ Vite::image('mockup-advbox.png') }}" alt="Mockup - Projeto Biblioteca de Padrões" />
+              </div>
+              <div class="projects__txt flex-column">
+                <span class="subtit">Documentação & <strong>Intranet</strong></span>
+                <h5 class="h5">Biblioteca de Padrões</h5>
+                <p>
+                  Projeto de redesign do site e reestruturação do SEO.
+                  <br><br>
+                  Desenvolvido em parceria com a talentosíssima Carol (que cuidou da parte de UI e pesquisa). Fiquei responsável pelo SEO e codificação deste projeto, optamos por seguir com WordPress, devido ao prévio conhecimento da ferramenta que o time de Marketing do escritório já tinha.
+                </p>
+                <ul class="ul projects__icons grid-3">
+                  <li>
+                    <span class="material-symbols-outlined">
+                      animation
+                    </span>
+                    <h6 class="h6">Animações</h6>
+                    <p>Utilização da Biblioteca GSAP para animações e interações no site</p>
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined">
+                      smart_toy
+                    </span>
+                    <h6 class="h6">SEO</h6>
+                    <p>Estruturação do projeto com foco na otimização do SEO</p>
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined">
+                      responsive_layout
+                    </span>
+                    <h6 class="h6">Web</h6>
+                    <p>Projeto web totalmente responsivo</p>
+                  </li>
+                </ul>
+                <a href="#projeto-1" class="btn btn-pri">Ver Projeto</a>
+              </div>
             </li>
-            <li class="border-card">
-              <a href="">
-                <div class="projects__img">
-                  <img loading="lazy" src="{{ Vite::image('works/bortoluzzi.png') }}" alt="Projeto da Bortoluzzi Advocacia" />
-                </div>
-                <div class="projects__txt">
-                  <span>Bortoluzzi Advocacia</span>
-                  <p>Projeto desenvolvido para o evento anual da ADVBOX. Sistema em Laravel e com integração com Stripe.</p>
-                </div>
-              </a>
+
+            {{-- SOUSA ADVOGADOS --}}
+            <li class="border-card grid-2 projects__item bg-pattern">
+              <div class="projects__img">
+                <img loading="lazy" src="{{ Vite::image('mockup-teste.png') }}" alt="Mockup - Projeto Brasil Já" />
+              </div>
+              <div class="projects__txt flex-column">
+                <span class="subtit">Ajudando a <strong>#transformudar</strong> vidas</span>
+                <h5 class="h5">Sousa Advogados</h5>
+                <p>
+                  Projeto de redesign do site e reestruturação do SEO.
+                  <br><br>
+                  Desenvolvido em parceria com a talentosíssima Carol (que cuidou da parte de UI e pesquisa). Fiquei responsável pelo SEO e codificação deste projeto, optamos por seguir com WordPress, devido ao prévio conhecimento da ferramenta que o time de Marketing do escritório já tinha.
+                </p>
+                <ul class="ul projects__icons grid-3">
+                  <li>
+                    <span class="material-symbols-outlined">
+                      animation
+                    </span>
+                    <h6 class="h6">Animações</h6>
+                    <p>Utilização da Biblioteca GSAP para animações e interações no site</p>
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined">
+                      smart_toy
+                    </span>
+                    <h6 class="h6">SEO</h6>
+                    <p>Estruturação do projeto com foco na otimização do SEO</p>
+                  </li>
+                  <li>
+                    <span class="material-symbols-outlined">
+                      responsive_layout
+                    </span>
+                    <h6 class="h6">Web</h6>
+                    <p>Projeto web totalmente responsivo</p>
+                  </li>
+                </ul>
+                <a href="#projeto-1" class="btn btn-pri">Ver Projeto</a>
+              </div>
             </li>
           </ul>
         </nav>

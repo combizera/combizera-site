@@ -5,27 +5,43 @@
   nav{
     margin: 40px 0;
   }
-  li{
-    transition: .3s;
-    &:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 0px 0 0 rgba(50,49,49,.1);
-    }
+  h2{
+    text-align: center;
+    margin-bottom: 80px;
   }
-  &__img{
-    img{
-      border-bottom: 2px solid $dark;
-      width: 100%;
-    }
+  &__item{
+    padding: 40px;
+  }
+  &__list{
+    gap: 80px;
   }
   &__txt{
-    padding: 20px;
-    span{
-      display: block;
-      margin-bottom: 10px;
-      font-size: 0.875rem;
-      font-weight: 300;
+    align-items: flex-start;
+    .subtit{
+      color: $color-pri;
     }
+    h5{
+      font-size: 3rem !important;
+      margin: 10px 0;
+    }
+    h6{
+      font-size: 1.25rem !important;
+      margin-bottom: 10px;
+    }
+  }
+  &__icons{
+    margin-top: 40px;
+    margin: 40px 0 20px 0;
+    p{
+      font-size: .875rem;
+    }
+    span{
+      font-size: 2.5rem !important;
+      color: $color-pri;
+    }
+  }
+  .btn{
+    display: block;
   }
   @include responsive(s){
     .container{
