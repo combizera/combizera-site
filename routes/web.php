@@ -19,7 +19,6 @@ Route::controller(SiteController::class)->group(function () {
 Route::fallback(function () {
   return view('errors.404');
 });
-// Route::get('/404', 'error')->name('error-404');
 
 Route::get('/api', [ApiController::class, 'api']);
 
