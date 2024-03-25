@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\DepoimentoController;
@@ -8,53 +9,58 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/', [SiteController::class, 'index'])->name('index');
-Route::get('/projeto', [SiteController::class, 'project'])->name('project');
-Route::get('/404', [SiteController::class, 'error'])->name('error-404');
+// SITE
+Route::controller(SiteController::class)->group(function () {
+  Route::get('/', 'index')->name('site.index');
+  Route::get('/projeto', 'project')->name('site.project');
+});
+
+Route::fallback(function () {
+  return view('errors.404');
+});
+// Route::get('/404', 'error')->name('error-404');
+
+Route::get('/api', [ApiController::class, 'api']);
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/login', [AdminController::class, 'auth'])->name('login');
 
 
+// LOGADO
 Route::middleware('auth')->group(function () {
   Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('auth');
 
   // LOGOUT
   Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
-
   // TAGS
-  Route::get('/tags/criar', [TagController::class, 'create'])->name('tags.create');
-  Route::post('/tags/save', [TagController::class, 'store'])->name('tags.save');
+  Route::controller(TagController::class)->group(function () {
+    Route::get('/tags/criar', 'create')->name('tags.create');
+    Route::post('/tags/save', 'store')->name('tags.save');
 
-  Route::get('/admin/tags/{tag}/edit', [TagController::class, 'edit'])->name('tags.edit');
-  Route::put('/admin/tags/{tag}', [TagController::class, 'update'])->name('tags.update');
-  Route::delete('/admin/tags/{tag}', [TagController::class, 'delete'])->name('tags.delete');
+    Route::get('/admin/tags/{tag}/edit', 'edit')->name('tags.edit');
+    Route::put('/admin/tags/{tag}', 'update')->name('tags.update');
+    Route::delete('/admin/tags/{tag}', 'delete')->name('tags.delete');
+  });
 
   // SKILLS
-  Route::get('/skills/criar', [SkillController::class, 'create'])->name('skills.create');
-  Route::post('/skills/save', [SkillController::class, 'store'])->name('skills.save');
+  Route::controller(SkillController::class)->group(function () {
+    Route::get('/skills/criar', 'create')->name('skills.create');
+    Route::post('/skills/save', 'store')->name('skills.save');
 
-  Route::get('/admin/skills/{skill}/edit', [SkillController::class, 'edit'])->name('skills.edit');
-  Route::put('/admin/skills/{skill}', [SkillController::class, 'update'])->name('skills.update');
-  Route::delete('/admin/skills/{skill}', [SkillController::class, 'delete'])->name('skills.delete');
+    Route::get('/admin/skills/{skill}/edit', 'edit')->name('skills.edit');
+    Route::put('/admin/skills/{skill}', 'update')->name('skills.update');
+    Route::delete('/admin/skills/{skill}', 'delete')->name('skills.delete');
+  });
 
   // DEPOIMENTOS
-  Route::get('/depoimentos/criar', [DepoimentoController::class, 'create'])->name('depoimentos.create');
-  Route::post('/depoimentos/save', [DepoimentoController::class, 'store'])->name('depoimentos.save');
+  Route::controller(DepoimentoController::class)->group(function () {
+    Route::get('/depoimentos/criar', 'create')->name('depoimentos.create');
+    Route::post('/depoimentos/save', 'store')->name('depoimentos.save');
 
-  Route::get('/admin/depoimentos/{depoimento}/edit', [DepoimentoController::class, 'edit'])->name('depoimentos.edit');
-  Route::put('/admin/depoimentos/{depoimento}', [DepoimentoController::class, 'update'])->name('depoimentos.update');
-  Route::delete('/admin/depoimentos/{depoimento}', [DepoimentoController::class, 'delete'])->name('depoimentos.delete');
+    Route::get('/admin/depoimentos/{depoimento}/edit', 'edit')->name('depoimentos.edit');
+    Route::put('/admin/depoimentos/{depoimento}', 'update')->name('depoimentos.update');
+    Route::delete('/admin/depoimentos/{depoimento}', 'delete')->name('depoimentos.delete');
+  });
 });
