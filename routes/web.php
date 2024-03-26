@@ -20,8 +20,6 @@ Route::fallback(function () {
   return view('errors.404');
 });
 
-Route::get('/api', [ApiController::class, 'api']);
-
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/login', [AdminController::class, 'auth'])->name('login');
 
@@ -63,3 +61,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/depoimentos/{depoimento}', 'delete')->name('depoimentos.delete');
   });
 });
+
+
+// API
+Route::get('/lol', [ApiController::class, 'form']);
+Route::post('/lol/maestria', [ApiController::class, 'maestria'])->name('api.maestria');
