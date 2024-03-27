@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Champion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -26,15 +27,18 @@ class ApiController extends Controller
 
   public function consulta(Request $request)
   {
-    $encrypetedSummonerId = "T1p1AMGkELObSrHIn0qpYAzpxEU2NFtlfIx_l00O8HEH3tUiHpGJYhQyu5pIncB5go9e9MayYwTgjA";
+    $encryptedSummonerId = "T1p1AMGkELObSrHIn0qpYAzpxEU2NFtlfIx_l00O8HEH3tUiHpGJYhQyu5pIncB5go9e9MayYwTgjA";
 
     $resultSummoner = Http::withHeader("X-Riot-Token", env("API_RIOT"))
-      ->get("https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{$encrypetedSummonerId}");
+      ->get("https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{$encryptedSummonerId}");
 
     $maestriaData = $resultSummoner->json();
 
-    $championIds = collect($maestriaData)->pluck('championId');
+    $championIds = collect($maestriaData)->pluck('championId')->toArray();
 
-    return view('lol.consulta', ['championIds' => $championIds]);
+    // Recupera os campeões do banco de dados com os IDs correspondentes
+    $champions = Champion::whereIn('champion_id', $championIds)->get();
+
+    return view('lol.consulta', ['champions' => $champions]);
   }
 }
