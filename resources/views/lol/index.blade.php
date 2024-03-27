@@ -1,5 +1,3 @@
-
-
 <x-layout title="API | League os Legends">
   <main id="lol" class="index bg-pattern" style="--icon-url:url('{{ Vite::image('icons/pattern-dot.svg') }}')">
     <section class="lol container">

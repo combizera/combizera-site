@@ -64,5 +64,7 @@ Route::middleware('auth')->group(function () {
 
 
 // API
-Route::get('/lol', [ApiController::class, 'form']);
-Route::post('/lol/consulta', [ApiController::class, 'maestria'])->name('api.maestria');
+Route::controller(ApiController::class)->prefix('lol')->group(function () {
+  Route::get('/', 'index')->name('api.index');
+  Route::post('/consulta', 'consulta')->name('api.consulta');
+});

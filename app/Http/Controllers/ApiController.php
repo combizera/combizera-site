@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class ApiController extends Controller
 {
-  public function form()
+  public function index()
   {
     return view('lol');
   }
@@ -24,17 +24,20 @@ class ApiController extends Controller
   //   dd($resultSummoner->json());
   // }
 
-  public function maestria(Request $request)
+  public function consulta(Request $request)
   {
     $encrypetedSummonerId = "T1p1AMGkELObSrHIn0qpYAzpxEU2NFtlfIx_l00O8HEH3tUiHpGJYhQyu5pIncB5go9e9MayYwTgjA";
 
-    // dd($encrypetedSummonerId);
-
-    $resultSummoner = Http::withHeader("X-Riot-Token", env("API_RIOT"))->get("https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{$encrypetedSummonerId}");
+    $resultSummoner = Http::withHeader("X-Riot-Token", env("API_RIOT"))
+      ->get("https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{$encrypetedSummonerId}");
 
     if ($resultSummoner->successful()) {
       $maestriaData = $resultSummoner->json();
-      dd($maestriaData);
+
+      // Filtra e extrai apenas os IDs dos campeões
+      $championIds = collect($maestriaData)->pluck('championId');
+
+      return view('lol.consulta', ['championIds' => $championIds]);
     } else {
       return response()->json(['error' => 'Falha ao obter dados de maestria'], $resultSummoner->status());
     }
