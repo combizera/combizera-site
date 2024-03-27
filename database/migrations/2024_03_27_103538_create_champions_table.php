@@ -15,9 +15,7 @@ return new class extends Migration
       $table->id();
       $table->string('champion_id')->unique();
       $table->string('champion_name')->nullable();
-      $table->string('title')->nullable();
-      $table->text('blurb')->nullable();
-      // Adicione outros campos conforme necessário
+      // $table->string('champion_name')->tags();
       $table->timestamps();
     });
   }

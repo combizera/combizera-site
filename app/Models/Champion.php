@@ -11,5 +11,6 @@ class Champion extends Model
 
   protected $fillable = [
     'champion_id',
+    'champion_name',
   ];
 }

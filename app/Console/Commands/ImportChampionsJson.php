@@ -42,7 +42,7 @@ class ImportChampionsJson extends Command
     }
 
     foreach ($data['data'] as $champion) {
-      $championName = $champion['name'] ?? 'Sem nome';
+      $championName = $champion['name'];
       $championId = $champion['key'];
 
       Champion::updateOrCreate(
