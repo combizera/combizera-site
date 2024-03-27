@@ -39,6 +39,28 @@ class ApiController extends Controller
     // Recupera os campeões do banco de dados com os IDs correspondentes
     $champions = Champion::whereIn('champion_id', $championIds)->get();
 
+    // Itera sobre os campeões para atribuir as informações corretas
+    foreach ($champions as $champion) {
+      $championId = $champion->champion_id;
+      $championInfo = collect($maestriaData)->firstWhere('championId', $championId);
+
+      if ($championInfo) {
+        // Atribui os valores de 'chestGranted' e 'championPoints' ao objeto Champion
+        $champion->chest_granted = $championInfo['chestGranted'] ?? false;
+
+        $champion->champion_points = $championInfo['championPoints'] ?? 0;
+      } else {
+        // Define valores padrão caso as informações não sejam encontradas
+        $champion->chest_granted = false;
+        $champion->champion_points = 0;
+      }
+    }
+
+    // Ordena a coleção de campeões com base nos pontos de maestria
+    $champions = $champions->sortByDesc('champion_points')->sortByDesc(function ($champion) {
+      return (int) str_replace('.', '', $champion->champion_points);
+    });
+
     return view('lol.consulta', ['champions' => $champions]);
   }
 }
