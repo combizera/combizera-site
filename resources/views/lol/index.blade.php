@@ -6,7 +6,7 @@
 
         <form class="form" action="{{ route('api.consulta') }}" method="POST">
           @csrf
-          <img src="{{ Vite::image('jinx-banner.webp') }}" alt="Banner da Jinx" />
+          <img src="{{ Vite::image('lol/jinx-banner.webp') }}" alt="Banner da Jinx" />
           <div class="form__lol">
             <div class="form__item">
               <label for="name">Seu nome de Invocador</label>

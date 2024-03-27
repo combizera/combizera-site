@@ -19,4 +19,32 @@
       margin-top: 40px;
     }
   }
+  &__list{
+    li{
+      position: relative;
+      background-color: $white;
+    }
+    img{
+      width: 100%;
+      display: block;
+    }
+    &-txt{
+      color: $white;
+      z-index: 10;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #05022078;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      h6{
+        text-transform: capitalize;
+        font-size: 1.5rem !important;
+      }
+      img{
+        max-width: 50px;
+      }
+    }
+  }
 }
