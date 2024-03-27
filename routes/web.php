@@ -65,4 +65,4 @@ Route::middleware('auth')->group(function () {
 
 // API
 Route::get('/lol', [ApiController::class, 'form']);
-Route::post('/lol/maestria', [ApiController::class, 'maestria'])->name('api.maestria');
+Route::post('/lol/consulta', [ApiController::class, 'maestria'])->name('api.maestria');

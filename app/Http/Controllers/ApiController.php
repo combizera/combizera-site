@@ -18,6 +18,7 @@ class ApiController extends Controller
       "name",
       "tag",
     ]);
+
     $resultSummoner = Http::withHeader("X-Riot-Token", env("API_RIOT"))->get("https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{$payload['name']}/{$payload['tag']}");
 
     dd($resultSummoner->json());
