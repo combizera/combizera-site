@@ -9,7 +9,7 @@ class ApiController extends Controller
 {
   public function index()
   {
-    return view('lol');
+    return view('lol.index');
   }
 
   // public function maestria(Request $request)
@@ -31,15 +31,10 @@ class ApiController extends Controller
     $resultSummoner = Http::withHeader("X-Riot-Token", env("API_RIOT"))
       ->get("https://br1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{$encrypetedSummonerId}");
 
-    if ($resultSummoner->successful()) {
-      $maestriaData = $resultSummoner->json();
+    $maestriaData = $resultSummoner->json();
 
-      // Filtra e extrai apenas os IDs dos campeões
-      $championIds = collect($maestriaData)->pluck('championId');
+    $championIds = collect($maestriaData)->pluck('championId');
 
-      return view('lol.consulta', ['championIds' => $championIds]);
-    } else {
-      return response()->json(['error' => 'Falha ao obter dados de maestria'], $resultSummoner->status());
-    }
+    return view('lol.consulta', ['championIds' => $championIds]);
   }
 }

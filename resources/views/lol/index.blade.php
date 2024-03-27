@@ -4,7 +4,7 @@
       <div class="lol__search">
         <h1 class="h1 txt-center">Veja sua maestria</h1>
 
-        <form class="form" action="{{ route('api.maestria') }}" method="POST">
+        <form class="form" action="{{ route('api.consulta') }}" method="POST">
           @csrf
           <img src="{{ Vite::image('jinx-banner.webp') }}" alt="Banner da Jinx" />
           <div class="form__lol">
